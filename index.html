@@ -88,6 +88,18 @@
     {
       font-weight: 600;
     }
+
+    iframe:not(.open)
+    {
+      height: 0 !important;
+      transition: height 500ms;
+    }
+
+    iframe.open
+    {
+      height: auto;
+      transition: height 500ms;
+    }
   </style>
 </head>
 
@@ -169,21 +181,47 @@
 
       <hr>
 
-      <div class="solution" id="git1_basic">
+      <div class="solution" id="git1_basic" onclick="document.getElementById('gb').classList.toggle('open')">
         <h3>
           solution - basic
         </h3>
       </div>
 
-      <hr>
+      <iframe
+        id="gb"
+        src="./git/basic.html"
+        style="width: 100%; height: 90vmin;"
+        onload="attachClickEvent(this)"
+      ></iframe>
+
+      <script>
+        function toggleOpen(element) {
+          element.classList.toggle('open');
+        }
+
+        function attachClickEvent(iframe) {
+          iframe.contentWindow.document.body.addEventListener('click', function() {
+            toggleOpen(iframe);
+          });
+        }
+      </script>
 
       <hr>
 
-      <div class="solution" id="git1_extended">
+      <hr>
+
+      <div class="solution" id="git1_extended" onclick="document.getElementById('extended').classList.toggle('open')">
         <h3>
           solution - extended
         </h3>
       </div>
+
+      <iframe
+        id="extended"
+        src="./git/extended.html"
+        style="width: 100%; height: 115vmin;"
+        onload="attachClickEvent(this)"
+      ></iframe>
 
       <hr>
 
