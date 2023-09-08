@@ -150,6 +150,14 @@
       {
         height: 115vmin;
       }
+
+      #flex,
+      #grid,
+      #animation
+      {
+        width: 100%;
+        height: calc(100vmin * (420 / 495) + 2.75rem);
+      }
     }
   </style>
 </head>
@@ -281,11 +289,15 @@
 
       <hr>
 
-      <div class="solution" id="layout1_flex">
+      <div class="solution" id="layout1_flex" onclick="toggleOpen(document.getElementById('flex'))">
         <h3>solution - flexbox</h3>
-      </div>
 
-      <hr>
+        <iframe
+          id="flex"
+          src="./layouts/flex.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+      </div>
 
       <p>
         2. Create a layout like this using CSS Grid.
@@ -293,11 +305,15 @@
 
       <hr>
 
-      <div class="solution" id="layout1_grid">
+      <div class="solution" id="layout1_grid" onclick="toggleOpen(document.getElementById('grid'))">
         <h3>solution - grid</h3>
-      </div>
 
-      <hr>
+        <iframe
+          id="grid"
+          src="./layouts/grid.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+      </div>
 
       <p>
         3. Create an animation: "A square in the center of the window rotates
@@ -306,8 +322,14 @@
 
       <hr>
 
-      <div class="solution" id="layout1_animation">
+      <div class="solution" id="layout1_animation" onclick="toggleOpen(document.getElementById('animation'))">
         <h3>solution - animation</h3>
+
+        <iframe
+          id="animation"
+          src="./layouts/animation.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
       </div>
 
       <hr>
