@@ -3,18 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>layouts-grid</title>
+  <title>layouts - grid</title>
   <style>
-    img
-    {
+    body {
       width: 100%;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      visibility: hidden;
+    }
+
+    .grid {
+      position: absolute;
+      left: 0;
+      top: -5vmin;
+      width: calc(100% - 10vmin);
+      height: calc(100% - 15vmin);
+      z-index: 1;
+      opacity: 1;
+
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* Adjusted column widths */
+      grid-template-rows: 15vmin 7vmin 66vmin 12vmin;
+      grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "footer footer footer";
+
+      gap: 1vmin;
+      padding: 10vmin 5vmin 5vmin;
+    }
+
+    header,
+    nav,
+    main,
+    aside,
+    footer
+    {
+      border: 0.5vmin solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vmin;
+      font-weight: 900;
+      text-shadow: 0 0 3px #000000;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    header
+    {
+      grid-area: header;
+    }
+
+    footer
+    {
+      grid-area: footer;
+    }
+
+    nav
+    {
+      grid-area: nav;
+    }
+
+    main
+    {
+      grid-area: main;
+    }
+
+    aside
+    {
+      grid-area: aside;
+    }
+
+    @media (orientation: portrait) {
+      .grid {
+        grid-template-rows: 3fr 2fr 7fr 2.5fr;
+        padding: 15vmin 5vmin 5vmin;
+      }
+
+      header {
+        grid-area: header;
+        height: 25vmin;
+      }
+
+      footer {
+        grid-area: footer;
+        height: 20vmin;
+      }
+
+      nav {
+        grid-area: nav;
+        height: 10vmin;
+      }
+
+      aside {
+        grid-area: aside;
+      }
     }
   </style>
 </head>
 <body>
   <h2>
-    layouts-grid
+    layouts - grid
   </h2>
   <img src="../assets/495-420-max.png" alt="background template">
+  <div class="grid">
+    <header>header</header>
+    <nav>navigation</nav>
+    <main>
+        content
+    </main>
+    <aside>sidebar</aside>
+    <footer>footer</footer>
+  </div>
 </body>
 </html>
