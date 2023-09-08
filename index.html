@@ -11,7 +11,8 @@
   <meta name="description"
     content="We are developers who adore their work. We create websites, blogs, landings of various complexity for your brand. Also, we make own products. Developing and learning every day is our principle of life. Thus, in work we use only modern technologies.">
   <style>
-    body {
+    body
+    {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -19,14 +20,16 @@
       color: #333;
     }
 
-    header {
+    header
+    {
       background-color: #007bff;
       color: #fff;
       padding: 20px 0;
       text-align: center;
     }
 
-    footer {
+    footer
+    {
       background-color: #007bff;
       color: #fff;
       padding: 20px;
@@ -82,6 +85,8 @@
     {
       display: block;
       margin: 0 auto;
+
+      max-width: 100%;
     }
 
     nav > ul > li > a
@@ -93,12 +98,53 @@
     {
       height: 0 !important;
       transition: height 500ms;
+      /* border: none; */
+      overflow: hidden;
+      width: calc(100% - 0.25rem);
     }
 
     iframe.open
     {
       height: auto;
       transition: height 500ms;
+    }
+
+    iframe {
+      width: 100%;
+      overflow-y: scroll;
+    }
+
+    code,
+    pre
+    {
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+    section+hr
+    {
+      height: 4px;
+      background-color: #9a9a9a;
+      margin: 0;
+    }
+
+    @media (orientation: portrait) {
+      iframe.open
+      {
+        height: 90vmax;
+      }
+    }
+
+    @media (orientation: landscape) {
+      #gb.open
+      {
+        height: 90vmin;
+      }
+
+      #extended.open
+      {
+        height: 115vmin;
+      }
     }
   </style>
 </head>
@@ -123,33 +169,33 @@
       <ul>
         <li><a href="#git">=== GIT ===</a>
           <ul>
-            <li><a href="#git1_basic">Solution - basic</a></li>
-            <li><a href="#git2_extended">Solution - extended</a></li>
+            <li><a href="#git1_basic" class="scroll_and_open">Solution - basic</a></li>
+            <li><a href="#git2_extended" class="scroll_and_open">Solution - extended</a></li>
           </ul>
         </li>
         <li><a href="#layout">=== CSS, HTML ===</a>
           <ul>
-            <li><a href="#layout1_flex">Flexbox layout</a></li>
-            <li><a href="#layout2_grid">CSS Grid layout</a></li>
-            <li><a href="#layout3_animation">Subtask 3: bulkRun Function</a>
+            <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
+            <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid layout</a></li>
+            <li><a href="#layout3_animation" class="scroll_and_open">Subtask 3: bulkRun Function</a>
             </li>
           </ul>
         </li>
         <li>
           <a href="#js-logic">=== JS Logic ===</a>
           <ul>
-            <li><a href="#js1">deepEqual Function</a></li>
-            <li><a href="#js2">chunkArray Function</a></li>
-            <li><a href="#js3">bulkRun Function</a></li>
-            <li><a href="#js4">arrayToObject Function</a></li>
-            <li><a href="#js5">objectToArray Function</a></li>
-            <li><a href="#js6">reliableMultiply Function</a></li>
-            <li><a href="#js7">mapObject Function</a></li>
-            <li><a href="#js8">combos Function</a></li>
-            <li><a href="#js9">add Function</a></li>
+            <li><a href="#js1" class="scroll_and_open">deepEqual Function</a></li>
+            <li><a href="#js2" class="scroll_and_open">chunkArray Function</a></li>
+            <li><a href="#js3" class="scroll_and_open">bulkRun Function</a></li>
+            <li><a href="#js4" class="scroll_and_open">arrayToObject Function</a></li>
+            <li><a href="#js5" class="scroll_and_open">objectToArray Function</a></li>
+            <li><a href="#js6" class="scroll_and_open">reliableMultiply Function</a></li>
+            <li><a href="#js7" class="scroll_and_open">mapObject Function</a></li>
+            <li><a href="#js8" class="scroll_and_open">combos Function</a></li>
+            <li><a href="#js9" class="scroll_and_open">add Function</a></li>
           </ul>
         </li>
-        </щl>
+      </ul>
     </nav>
 
     <hr>
@@ -181,49 +227,31 @@
 
       <hr>
 
-      <div class="solution" id="git1_basic" onclick="document.getElementById('gb').classList.toggle('open')">
+      <div class="solution" id="git1_basic" onclick="toggleOpen(document.getElementById('gb'))">
         <h3>
           solution - basic
         </h3>
-      </div>
 
-      <iframe
+        <iframe
         id="gb"
         src="./git/basic.html"
-        style="width: 100%; height: 90vmin;"
         onload="attachClickEvent(this)"
-      ></iframe>
-
-      <script>
-        function toggleOpen(element) {
-          element.classList.toggle('open');
-        }
-
-        function attachClickEvent(iframe) {
-          iframe.contentWindow.document.body.addEventListener('click', function() {
-            toggleOpen(iframe);
-          });
-        }
-      </script>
+        ></iframe>
+      </div>
 
       <hr>
 
-      <hr>
-
-      <div class="solution" id="git1_extended" onclick="document.getElementById('extended').classList.toggle('open')">
+      <div class="solution" id="git2_extended" onclick="toggleOpen(document.getElementById('extended'))">
         <h3>
           solution - extended
         </h3>
+
+        <iframe
+          id="extended"
+          src="./git/extended.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
       </div>
-
-      <iframe
-        id="extended"
-        src="./git/extended.html"
-        style="width: 100%; height: 115vmin;"
-        onload="attachClickEvent(this)"
-      ></iframe>
-
-      <hr>
 
     </section>
 
@@ -621,9 +649,54 @@
       respective folders. If you have any questions or need further
       clarification, don't hesitate to reach out.</p>
   </footer>
-</body>
 
-</html>
+  <script>
+    function closeAllBut(elementToKeepOpen) {
+      // Remove the "open" class from all iframe elements except the specified one
+      const iframeElements = document.getElementsByTagName('iframe');
+      for (const iframe of iframeElements) {
+        if (iframe !== elementToKeepOpen) {
+          iframe.classList.remove('open');
+        }
+      }
+    }
+
+    function toggleOpen(element) {
+      closeAllBut(element);
+      element.classList.toggle('open');
+    }
+
+    function attachClickEvent(iframe) {
+      iframe.contentWindow.document.body.addEventListener('click', function() {
+        toggleOpen(iframe);
+      });
+    }
+
+    // Function to handle the click event
+    function handleScrollAndOpenClick(event) {
+      event.preventDefault(); // Prevent the default link behavior
+
+      // Get the target element by its href attribute
+      const targetId = event.target.getAttribute('href').substring(1); // Remove the "#" symbol
+      const targetElement = document.getElementById(targetId);
+
+      // Scroll to the target element
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Add smooth scrolling effect
+      });
+
+      // After scrolling, trigger a click event on the target element
+      setTimeout(function () {
+        targetElement.click();
+      }, 500); // Delay to ensure the scrolling animation completes
+    }
+
+    // Attach the event listener to all elements with the class "scroll_and_open"
+    const elementsWithListener = document.querySelectorAll('.scroll_and_open');
+    elementsWithListener.forEach(function (element) {
+      element.addEventListener('click', handleScrollAndOpenClick);
+    });
+  </script>
 </body>
 
 </html>
