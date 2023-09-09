@@ -22,7 +22,8 @@
       margin: 0;
       padding: 0;
       background-color: #f5f5f5;
-      color: #333;
+      /* color: #333; */
+      font-weight: 500;
     }
 
     header
@@ -98,9 +99,10 @@
       max-width: 100%;
     }
 
-    nav > ul > li > a
+    ul > li > a
     {
       font-weight: 600;
+      font-size: 150%;
     }
 
     iframe:not(.open)
@@ -152,27 +154,66 @@
       #grid,
       #animation
       {
-        height: calc(100vmin + 2.75rem);
+        height: 90vmin;
       }
     }
 
     @media (orientation: landscape) {
       #gb.open
       {
-        height: 90vmin;
+        height: 85vmin;
       }
 
       #extended.open
       {
-        height: 115vmin;
+        height: 105vmin;
       }
 
       #flex,
       #grid,
       #animation
       {
-        height: 95vmin;
+        height: 90vmin;
       }
+    }
+
+    code
+    {
+      display: block;
+      border: 0.1rem solid #000;
+      max-width: 100%;
+      position: relative;
+      border-radius: 0.5rem;
+      overflow-y: hidden;
+    }
+
+    pre
+    {
+      position: relative;
+      left: -2.5rem;
+      top: 1.75rem;
+      font-weight: bold;
+    }
+
+    code::before
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1rem);
+      height: 1rem;
+      background-color: gray;
+      content: '#example';
+      color: whitesmoke;
+      padding: 0.25rem 0.5rem;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    var
+    {
+      background-color: lightgray;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -354,8 +395,6 @@
           onload="attachClickEvent(this)"
         ></iframe>
       </div>
-
-      <hr>
 
     </section>
 

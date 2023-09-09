@@ -6,17 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>layouts - flex</title>
   <style>
-    :root
-    {
-      --azure: #0056B9;
-      --gold: #FFD800;
-    }
-
     body
     {
       width: 100%;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
     .animation,
@@ -27,16 +22,16 @@
       font-weight: bold;
       position: absolute;
       left: 50%;
-      top: 0;
+      top: -1vmin;
       transform: translate(-50%, 0);
       width: 82vmin;
       height: 92vmin;
-      padding: 15vmin 9vmin 5vmin;
+      padding: 5vmin 9vmin;
     }
 
     .flex
     {
-      color: var(--azure);
+      color: #000;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -48,7 +43,7 @@
     .flex-main__sidebar,
     .flex-footer
     {
-      border: 0.5vmin solid var(--azure);
+      border: 0.5vmin solid #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -99,10 +94,6 @@
 </head>
 
 <body>
-  <h2>
-    layouts - flex
-  </h2>
-
   <div class="flex">
     <header class="flex-header">
       <section class="flex-header__main">header</section>

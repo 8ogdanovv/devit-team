@@ -6,17 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>layouts - grid</title>
   <style>
-    :root
-    {
-      --azure: #0056B9;
-      --gold: #FFD800;
-    }
-
     body
     {
       width: 100%;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
     .grid
@@ -26,16 +21,16 @@
       font-weight: bold;
       position: absolute;
       left: 50%;
-      top: 0;
+      top: -1vmin;
       transform: translate(-50%, 0);
       width: 82vmin;
       height: 92vmin;
-      padding: 15vmin 9vmin 5vmin;
+      padding: 5vmin 9vmin 5vmin;
     }
 
     .grid
     {
-      color: var(--gold);
+      color: #000;
       display: grid;
       grid-template-rows: 5fr 12fr 2fr;
       grid-template-areas:
@@ -81,7 +76,7 @@
     .grid-main__sidebar,
     .grid-footer
     {
-      border: 0.5vmin solid var(--gold);
+      border: 0.5vmin solid #000;
 
       display: flex;
       align-items: center;
@@ -91,10 +86,6 @@
 </head>
 
 <body>
-  <h2>
-    layouts - grid
-  </h2>
-
   <div class="grid">
     <header class="grid-header">
       <section class="grid-header__main">header</section>
