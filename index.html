@@ -11,6 +11,11 @@
   <meta name="description"
     content="We are developers who adore their work. We create websites, blogs, landings of various complexity for your brand. Also, we make own products. Developing and learning every day is our principle of life. Thus, in work we use only modern technologies.">
   <style>
+    :root
+    {
+      --azure: #0056B9;
+      --gold: #FFD800;
+    }
     body
     {
       font-family: Arial, sans-serif;
@@ -22,7 +27,7 @@
 
     header
     {
-      background-color: #007bff;
+      background-color: var(--azure);
       color: #fff;
       padding: 20px 0;
       text-align: center;
@@ -30,7 +35,7 @@
 
     footer
     {
-      background-color: #007bff;
+      background-color: var(--gold);
       color: #fff;
       padding: 20px;
       text-align: center;
@@ -39,7 +44,6 @@
     }
 
     h1,
-    /* h2, */
     h3 {
       margin: 0;
     }
@@ -148,7 +152,7 @@
       #grid,
       #animation
       {
-        height: calc(100vmax * (420 / 495) + 2.75rem);
+        height: calc(100vmin + 2.75rem);
       }
     }
 
@@ -167,7 +171,7 @@
       #grid,
       #animation
       {
-        height: calc(100vmin * (420 / 495) + 2.75rem);
+        height: 95vmin;
       }
     }
   </style>
@@ -177,18 +181,25 @@
   <header>
     <a href="https://github.com/vadym4che/devit-team">
       <h1>DevIT Team Test Tasks Repository</h1>
+
       <p>Welcome to the DevIT Team Test Tasks repository!</p>
     </a>
   </header>
 
   <main class="main">
-    <p>This repository contains a collection of test tasks and solutions for
-      various development disciplines.</p>
-    <p>Here you'll find tasks related to Git, HTML/CSS, JavaScript, and more.
+    <p>
+      This repository contains a collection of test tasks and solutions for
+      various development disciplines.
+    </p>
+
+    <p>
+      Here you'll find tasks related to Git, HTML/CSS, JavaScript, and more.
       Each task is organized in its own subfolder with detailed descriptions and
-      implementations.</p>
+      implementations.
+    </p>
 
     <h2>Navigate Through the Tasks</h2>
+
     <nav>
       <ul>
         <li><a href="#git">=== GIT ===</a>
@@ -197,6 +208,7 @@
             <li><a href="#git2_extended" class="scroll_and_open">Solution - extended</a></li>
           </ul>
         </li>
+
         <li><a href="#layout">=== CSS, HTML ===</a>
           <ul>
             <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
@@ -205,6 +217,7 @@
             </li>
           </ul>
         </li>
+
         <li>
           <a href="#js-logic">=== JS Logic ===</a>
           <ul>
@@ -245,8 +258,7 @@
 
       <p>
         Describe your next steps to make your code appear in the 'master' branch
-        of the repository at <a
-          href="mailto:git@example.com">git@example.com</a>:example/test.git.
+        of the repository at <a href="mailto:git@example.com">git@example.com</a>:example/test.git.
       </p>
 
       <hr>
@@ -316,7 +328,7 @@
 
       <hr>
 
-      <div class="solution" id="layout1_grid" onclick="toggleOpen(document.getElementById('grid'))">
+      <div class="solution" id="layout2_grid" onclick="toggleOpen(document.getElementById('grid'))">
         <h3>solution - grid</h3>
 
         <iframe
@@ -333,7 +345,7 @@
 
       <hr>
 
-      <div class="solution" id="layout1_animation" onclick="toggleOpen(document.getElementById('animation'))">
+      <div class="solution" id="layout3_animation" onclick="toggleOpen(document.getElementById('animation'))">
         <h3>solution - animation</h3>
 
         <iframe
