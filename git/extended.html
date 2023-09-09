@@ -5,6 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>git-extended</title>
+  <style>
+    code
+    {
+      display: block;
+      border: 0.1rem solid #000;
+      max-width: 80ch;
+      position: relative;
+      border-radius: 0.5rem;
+    }
+
+    pre
+    {
+      position: relative;
+      left: -2.5rem;
+      top: 1.25rem;
+      font-weight: bold;
+    }
+
+    code::before
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1rem);
+      height: 1rem;
+      background-color: gray;
+      content: attr(title);
+      color: whitesmoke;
+      padding: 0.25rem 0.5rem;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,79 +46,90 @@
   </h2>
 
   <p>
-    Использование Git для управления кодом - это отличное решение, но есть
-    несколько дополнительных шагов и лучших практик, которые могут улучшить
-    общую поддерживаемость вашего кода и сотрудничество с клиентом:
+    <u>Using Git for code management is a great solution</u>, but <em>there are
+    <strong>a few additional steps</strong> and best practices</em>,
+    that can improve your code's overall maintainability and client collaboration:
   </p>
 
   <ul>
     <li>
-      Создайте .gitignore файл:
-      Создайте файл .gitignore, чтобы исключить файлы и папки, которые не должны
-      попадать в репозиторий (например, временные файлы, зависимости, файлы с
-      настройками IDE). Это поможет поддерживать репозиторий чистым. Вот пример
-      .gitignore для JavaScript-проекта:
+      <strong>Create a .gitignore file:</strong>
+      Create a .gitignore file to exclude files and folders that should not go into the repository
+      (for example, temporary files, dependencies, IDE settings files).
+      This will help keep the repository clean. Here's an example .gitignore for a JavaScript project:
 
       <code title=".gitignore">
         <pre>
-          # Исключить временные файлы и каталоги
+          # Exclude temporary files and directories
           node_modules/
           .cache/
 
-          # Исключить файлы настроек IDE
+          # Exclude IDE settings files
           .vscode/
           .idea/
         </pre>
       </code>
     </li>
     <li>
-      Создайте ветку разработки:
-      Хорошей практикой является создание ветки разработки (например, develop),
-      на которой вы будете вести разработку и интеграцию новых функций. После
-      того как код прошел тестирование и готов для выкладки, вы сможете сливать
-      его с веткой master для релиза.
+      <strong>
+        Create a development branch:
+      </strong>
+      It is a good practice to create a development branch (for example, develop)
+      in which you will develop and integrate new features.
+      Once the code has been tested and is ready for release, you can merge it into the master branch for release.
     </li>
     <li>
-      Используйте комментарии в коммитах:
-      Старайтесь писать информативные комментарии к коммитам, чтобы было
-      понятно, какие изменения были внесены. Хорошо оформленные комментарии
-      помогут вам и другим разработчикам понимать историю изменений в проекте.
+      <strong>
+        Use commit comments:
+      </strong>
+      Try to write informative commit comments to make it clear what changes have been made.
+      Well-formatted comments will help you and other developers understand the history of changes in the project.
     </li>
     <li>
-      Постоянная интеграция (Continuous Integration, CI):
-      Настройте систему CI, такую как Travis CI, CircleCI, GitHub Actions и
-      другие, чтобы автоматизировать процесс сборки и тестирования вашего кода
-      при каждом коммите. Это позволит быстро выявлять и исправлять ошибки.
+      <strong>
+        Continuous Integration (CI):
+      </strong>
+      Set up a CI system such as Travis CI, CircleCI, GitHub Actions,
+      and others to automate the process of building and testing your code with every commit.
+      This will allow you to quickly identify and correct errors.
     </li>
     <li>
-      Pull Request (PR) или Merge Request (MR):
-      Вместо прямой загрузки кода в master, рекомендуется создавать PR или MR.
-      Это позволяет другим разработчикам рассмотреть и обсудить изменения перед
-      их объединением с master. Вы сможете получить обратную связь и убедиться,
-      что код соответствует стандартам.
+      <strong>
+        Pull Request (PR) or Merge Request (MR):
+      </strong>
+      Instead of directly uploading code to master, it is recommended to create a PR or MR.
+      This allows other developers to review and discuss changes before merging them into master.
+      You will be able to get feedback and ensure that the code meets the standards.
     </li>
     <li>
-      Версионирование:
-      Размещайте теги на релизных версиях вашего кода. Это помогает легко
-      вернуться к конкретным версиям и отслеживать изменения.
+      <strong>
+        Versioning:
+      </strong>
+      Place tags on release versions of your code.
+      This makes it easy to go back to specific versions and track changes.
     </li>
     <li>
-      Документация:
-      Ведите документацию проекта, включая README файл с инструкциями по
-      установке и использованию. Это поможет другим разработчикам и
-      пользователям быстро разобраться в проекте.
+      <strong>
+        Documentation:
+      </strong>
+      Maintain project documentation, including a README file with installation and usage instructions.
+      This will help other developers and users quickly understand the project.
     </li>
     <li>
-      Контроль версий зависимостей:
-      Используйте файлы package.json (для Node.js проектов) или аналогичные для
-      других языков и платформ. Это позволяет фиксировать версии зависимостей и
-      обеспечивать совместимость.
+      <strong>
+        Dependency version control:
+      </strong>
+      Use package.json files (for Node.js projects) or similar for other languages and platforms.
+      This allows dependency versions to be fixed and compatibility to be ensured.
     </li>
   </ul>
 
   <p>
-    Эти практики помогут вам улучшить поддерживаемость вашего кода и облегчить
-    сотрудничество с клиентом.
+    <strong>
+      <em>
+        These practices will help you improve the maintainability of your code and make it easier to collaborate with your client.
+      </em>
+    </strong>
   </p>
 
 </body>

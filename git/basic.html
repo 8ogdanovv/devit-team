@@ -5,6 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>git-basic</title>
+  <style>
+    code
+    {
+      display: block;
+      border: 0.1rem solid #000;
+      max-width: 80ch;
+      position: relative;
+      border-radius: 0.5rem;
+    }
+
+    pre
+    {
+      position: relative;
+      left: -2.5rem;
+      top: 1.25rem;
+      font-weight: bold;
+    }
+
+    code::before
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1rem);
+      height: 1rem;
+      background-color: gray;
+      content: attr(title);
+      color: whitesmoke;
+      padding: 0.25rem 0.5rem;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    var
+    {
+      background-color: lightgray;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,17 +52,18 @@
   </h2>
 
   <p>
-    Для того чтобы загрузить ваш код в ветку master репозитория
-    git@example.com:example/test.git, вам потребуется выполнить несколько шагов.
-    Вот подробная инструкция:
+    To push your code into the <var>master</var> branch of the
+    <var>git@example.com:example/test.git</var>, you will need to follow several steps.
+    Here are the detailed instructions:
   </p>
 
   <ol>
     <li>
-      Инициализация локального git-репозитория:
-      Если у вас еще нет локального git-репозитория для вашего проекта, вы
-      должны создать его. Для этого перейдите в папку с вашим кодом через
-      командную строку и выполните следующую команду:
+      <strong>
+        Initializing a local git repository:
+      </strong>
+      If you don't already have a local git repository for your project, you must create one.
+      To do this, go to the folder with your code via the command line and run the following command:
 
       <code title="bash">
         <pre>
@@ -33,22 +73,26 @@
 
     </li>
     <li>
-      Добавление и коммит вашего кода:
-      Добавьте все файлы и изменения в вашем проекте в индекс git и сделайте
-      коммит. Используйте следующие команды:
+      <strong>
+        Adding and committing your code:
+      </strong>
+      Add all files and changes in your project to the git index and commit.
+      Use the following commands:
 
       <code title="bash">
         <pre>
           git add .
-          git commit -m "Ваш комментарий к коммиту"
+          git commit -m "Your commit comment"
         </pre>
       </code>
     </li>
     <li>
-      Добавление удаленного репозитория:
-      Теперь вам нужно добавить удаленный репозиторий
-      git@example.com:example/test.git в ваш локальный git-репозиторий.
-      Выполните команду:
+      <strong>
+        Adding a Remote Repository:
+      </strong>
+      Now you need to add the remote repository
+      <var>git@example.com:example/test.git</var> to your local git repository.
+      Run the command:
 
       <code title="bash">
         <pre>
@@ -57,8 +101,10 @@
       </code>
     </li>
     <li>
-      Отправка кода на удаленный репозиторий:
-      Загрузите ваш код на удаленный репозиторий ветку master:
+      <strong>
+        Pushing code to a remote repository:
+      </strong>
+      Upload your code to the remote repository master branch:
 
       <code title="bash">
         <pre>
@@ -66,21 +112,21 @@
         </pre>
       </code>
 
-      Эта команда отправит ваш код в ветку master удаленного репозитория. После
-      этого вас попросят ввести учетные данные (логин и пароль) для доступа к
-      удаленному репозиторию.
+      This command will push your code to the <var>master</var> branch of the remote repository. After this, you will be asked to enter credentials (username and password) to access the remote repository.
     </li>
     <li>
-      Завершение:
-      Теперь ваш код должен быть загружен в ветку master репозитория
-      git@example.com:example/test.git. Вы можете проверить это, перейдя на
-      страницу репозитория на GitLab или используя команду git log для просмотра
-      истории коммитов.
+      <strong>
+        Completion:
+      </strong>
+      Your code should now be uploaded to the <var>master</var> branch of the
+      <var>git@example.com:example/test.git</var>. You can check this by going to the repository page on GitLab or using the <span style="background-color: lightgrey; font-weight: bold;">&nbsp;git log&nbsp;</span> command to view the commit history.
     </li>
   </ol>
 
   <p>
-    Вот и все, ваш код теперь доступен в репозитории на ветке master.
+    <strong>
+      That's it, your code is now available in the repository on the <var>master</var> branch.
+    </strong>
   </p>
 </body>
 
