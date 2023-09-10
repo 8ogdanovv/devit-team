@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>deepEqual</title>
+  <style>
+    iframe
+    {
+      width: 100%;
+      height: 97vmin;
+    }
+  </style>
+</head>
+<body>
+  <!-- <pre>
+    function deepEqual(obj1, obj2) {
+      // Check if the objects are of the same type
+      if (typeof obj1 !== typeof obj2) {
+        return false;
+      }
+
+      // If they are not objects, compare them directly
+      if (typeof obj1 !== 'object' || obj1 === null) {
+        return obj1 === obj2;
+      }
+
+      // Get the keys of both objects
+      const keys1 = Object.keys(obj1);
+      const keys2 = Object.keys(obj2);
+
+      // Check if the number of keys is the same
+      if (keys1.length !== keys2.length) {
+        return false;
+      }
+
+      // Iterate through the keys and recursively compare their values
+      for (const key of keys1) {
+        if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+  </pre> -->
+  <iframe
+    id="deepEqual"
+    src="https://codesandbox.io/embed/typescript-playground-export-forked-mvn6h5?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+    title="TypeScript Playground Export (forked)"
+    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+  ></iframe>
+</body>
+</html>

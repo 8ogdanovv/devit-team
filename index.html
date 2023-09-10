@@ -8,6 +8,9 @@
   <link rel="shortcut icon"
     href="https://devit-team.com/app/uploads/2019/01/logo.png"
     type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <meta name="description"
     content="We are developers who adore their work. We create websites, blogs, landings of various complexity for your brand. Also, we make own products. Developing and learning every day is our principle of life. Thus, in work we use only modern technologies.">
   <style>
@@ -18,11 +21,10 @@
     }
     body
     {
-      font-family: Arial, sans-serif;
+      font-family: 'Victor Mono', monospace;
       margin: 0;
       padding: 0;
       background-color: #f5f5f5;
-      /* color: #333; */
       font-weight: 500;
     }
 
@@ -156,6 +158,22 @@
       {
         height: 90vmin;
       }
+
+      /* #js-logic > .solution > iframe.open, */
+      #deepEqual
+      {
+        height: 75vmax;
+      }
+
+      #chunkArray
+      {
+        height: 52vmax;
+      }
+
+      #bulkRun
+      {
+        height: 90vmax;
+      }
     }
 
     @media (orientation: landscape) {
@@ -172,6 +190,22 @@
       #flex,
       #grid,
       #animation
+      {
+        height: 90vmin;
+      }
+
+      /* #js-logic > .solution > iframe.open, */
+      #deepEqual
+      {
+        height: 75vmin;
+      }
+
+      #chunkArray
+      {
+        height: 52vmin;
+      }
+
+      #bulkRun
       {
         height: 90vmin;
       }
@@ -422,13 +456,25 @@
 
       <hr>
 
-      <div class="solution" id="js1">
+      <div class="solution" id="js1" onclick="toggleOpen(document.getElementById('deepEqual'))">
         <h3>
           solution - deepEqual
         </h3>
-      </div>
 
-      <hr>
+        <iframe
+          id="deepEqual"
+          src="./js-logic/function1-deepEqual.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+
+        <!-- <iframe
+          id="deepEqual"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-mvn6h5?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript Playground Export (forked)"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe> -->
+      </div>
 
       <p>
         2. Write the <var>chunkArray</var> generator function, which returns an
@@ -447,10 +493,18 @@
 
       <hr>
 
-      <div class="solution" id="js2">
+      <div class="solution" id="js2" onclick="toggleOpen(document.getElementById('chunkArray'))">
         <h3>
           solution - chunkArray
         </h3>
+
+        <iframe
+          id="chunkArray"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-fy2rrg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript Playground Export (forked)"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -481,10 +535,18 @@
 
       <hr>
 
-      <div class="solution" id="js3">
+      <div class="solution" id="js3" onclick="toggleOpen(document.getElementById('bulkRun'))">
         <h3>
           solution - bulkRun
         </h3>
+
+        <iframe
+          id="bulkRun"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-8d4td2?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript Playground Export (forked)"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
