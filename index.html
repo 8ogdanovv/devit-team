@@ -59,6 +59,12 @@
       bottom: 0;
     }
 
+    header, footer
+    {
+      background-image: linear-gradient(to bottom right, var(--azure), var(--gold));
+      /* Other CSS properties for .header and .footer */
+    }
+
     address
     {
       width: 90vmin;
@@ -208,13 +214,18 @@
         overflow-y: hidden;
       }
 
-      .close-button,
+      .close-button
+      {
+        width: 5vmax;
+        height: 5vmax;
+        bottom: 3vmax;
+      }
+
       #openMenuButton
       {
-        font-size: 5vmax;
-        width: 8vmax;
-        height: 8vmax;
-        right: 1vmax;
+        width: 5vmax;
+        height: 5vmax;
+        right: 3vmax;
       }
     }
 
@@ -241,13 +252,18 @@
         height: 75vmin;
       }
 
-      .close-button,
+      .close-button
+      {
+        width: 5vmin;
+        height: 5vmin;
+        bottom: 3vmin;
+      }
+
       #openMenuButton
       {
-        font-size: 5vmin;
-        width: 8vmin;
-        height: 8vmin;
-        right: 1vmin;
+        width: 5vmin;
+        height: 5vmin;
+        right: 3vmin;
       }
     }
 
@@ -303,16 +319,21 @@
     {
       display: none;
       position: fixed;
-      width: 90dvw;
-      height: 90dvh;
+      width: 100dvw;
+      height: 100dvh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 20px;
       background-color: white;
       z-index: 1000;
-      box-shadow: 0px 0px 5vmax rgba(0, 0, 0, 0.5);
-      border-radius: 1vmin;
+      /* box-shadow: 0px 0px 5vmax rgba(0, 0, 0, 0.5); */
+      /* border-radius: 1vmin; */
+    }
+
+    .close-button
+    {
+      left: 50%;
     }
 
     /* Style for the close button */
@@ -320,25 +341,25 @@
     #openMenuButton
     {
       position: fixed;
-      top: 50%;
-      color: white;
+      font-weight: bold;
       border: none;
       cursor: pointer;
       border-radius: 50%;
       transform: translate(-50%, -50%);
+      background-color: transparent;
     }
 
-    .close-button
+    /* .close-button
     {
-      color: white;
-      background-color: black;
-    }
+      border: 1vmin dashed black;
+    } */
 
     #openMenuButton
     {
       background-color: transparent;
       display: none;
       z-index: 1;
+      top: 50%;
     }
 
     #openMenuButton::after
@@ -368,10 +389,18 @@
       filter: blur(1.5rem);
     }
 
-    #openMenuButton > img
+    #openMenuButton > img,
+    .close-button > img
     {
       width: 100%;
-      height: 100%;
+      height: auto;
+    }
+
+    .close-button > img
+    {
+      width: 100%;
+      height: auto;
+      transform: scale(1.5) translate(-25%, 10%);
     }
 
   </style>
@@ -413,7 +442,9 @@
     <div id="navigationMenu" class="menu">
       <h2 style="background-color: black; color: white;">Navigate Through the Tasks</h2>
 
-      <button id="closeMenuButton" class="close-button">X</button>
+      <button id="closeMenuButton" class="close-button">
+        <img src="./assets/black-circle-close-button-png-5.png" alt="close button">
+      </button>
 
       <nav>
         <ul>
