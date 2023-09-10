@@ -34,6 +34,19 @@
       color: #fff;
       padding: 20px 0;
       text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 3.3vmin;
+      line-height: 9vmin;
+    }
+
+    header a
+    {
+      display: inline-block;
+      margin: 3vmin;
     }
 
     footer
@@ -66,7 +79,7 @@
       display: inline-block;
     }
 
-    /* main {
+    /* section {
       display: none;
     } */
 
@@ -194,6 +207,15 @@
         height: 75vmax;
         overflow-y: hidden;
       }
+
+      .close-button,
+      #openMenuButton
+      {
+        font-size: 5vmax;
+        width: 8vmax;
+        height: 8vmax;
+        right: 1vmax;
+      }
     }
 
     @media (orientation: landscape) {
@@ -217,6 +239,15 @@
       #js-logic > .solution > iframe.open
       {
         height: 75vmin;
+      }
+
+      .close-button,
+      #openMenuButton
+      {
+        font-size: 5vmin;
+        width: 8vmin;
+        height: 8vmin;
+        right: 1vmin;
       }
     }
 
@@ -242,7 +273,7 @@
     @media (max-width: 768px) and (resolution: 72dpi) {
       pre
       {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
       }
     }
 
@@ -266,11 +297,81 @@
       background-color: lightgray;
       font-weight: bold;
     }
+
+    /* CSS for the navigation menu */
+    .menu
+    {
+      display: none;
+      position: fixed;
+      width: 90dvw;
+      height: 90dvh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      z-index: 1000;
+      box-shadow: 0px 0px 5vmax rgba(0, 0, 0, 0.5);
+      border-radius: 1vmin;
+    }
+
+    /* Style for the close button */
+    .close-button,
+    #openMenuButton
+    {
+      position: fixed;
+      top: 50%;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close-button
+    {
+      color: white;
+      background-color: black;
+    }
+
+    #openMenuButton
+    {
+      background-color: transparent;
+      display: none;
+      z-index: 1;
+    }
+
+    #openMenuButton::after
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #0004;
+      /* display: none; */
+      filter: blur(1rem);
+      /* z-index: -1; */
+    }
+
+    #openMenuButton > img
+    {
+      width: 100%;
+      height: 100%;
+    }
+
   </style>
 </head>
 
 <body>
   <header>
+    <a href="https://devit-team.com/">
+      <img src="https://devit-team.com/app/uploads/2019/01/logo.svg" alt="DevIT logo" style="width: 25vmin;">
+    </a>
+
+
     <a href="https://github.com/vadym4che/devit-team">
       <h1>DevIT Team Test Tasks Repository</h1>
 
@@ -289,6 +390,54 @@
       Each task is organized in its own subfolder with detailed descriptions and
       implementations.
     </p>
+
+    <!-- Button to open the navigation menu -->
+    <button id="openMenuButton">
+      <!-- <img src="./assets/transparent-bulleted-icon-bulleted-list-icon-bullets-icon-5dbc25bae95631.5279306415726115149558.png" alt="Bullet point menu icon"> -->
+      <img src="./assets/list.png" alt="Bullet point menu icon">
+    </button>
+
+    <!-- Navigation menu -->
+    <div id="navigationMenu" class="menu">
+      <h2 style="background-color: black; color: white;">Navigate Through the Tasks</h2>
+
+      <button id="closeMenuButton" class="close-button">X</button>
+
+      <nav>
+        <ul>
+          <li><a href="#git">=== GIT ===</a>
+            <ul>
+              <li><a href="#git1_basic" class="scroll_and_open">git - basic</a></li>
+              <li><a href="#git2_extended" class="scroll_and_open">git - extended</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#layout">=== CSS, HTML ===</a>
+            <ul>
+              <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
+              <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid layout</a></li>
+              <li><a href="#layout3_animation" class="scroll_and_open">Animation layout</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#js-logic">=== JS Logic ===</a>
+            <ul>
+              <li><a href="#js1" class="scroll_and_open">deepEqual Function</a></li>
+              <li><a href="#js2" class="scroll_and_open">chunkArray Function</a></li>
+              <li><a href="#js3" class="scroll_and_open">bulkRun Function</a></li>
+              <li><a href="#js4" class="scroll_and_open">arrayToObject Function</a></li>
+              <li><a href="#js5" class="scroll_and_open">objectToArray Function</a></li>
+              <li><a href="#js6" class="scroll_and_open">reliableMultiply Function</a></li>
+              <li><a href="#js7" class="scroll_and_open">mapObject Function</a></li>
+              <li><a href="#js8" class="scroll_and_open">combos Function</a></li>
+              <li><a href="#js9" class="scroll_and_open">add Function</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <h2>Navigate Through the Tasks</h2>
 
@@ -894,6 +1043,12 @@
       const targetId = event.target.getAttribute('href').substring(1); // Remove the "#" symbol
       const targetElement = document.getElementById(targetId);
 
+      // Check if the navigation menu is open (displayed as "block")
+      const navigationMenu = document.getElementById('navigationMenu');
+      if (navigationMenu.style.display === 'block') {
+        closeMenu(); // Call the closeMenu function
+      }
+
       // Scroll to the target element
       targetElement.scrollIntoView({
         behavior: 'smooth', // Add smooth scrolling effect
@@ -910,6 +1065,50 @@
     elementsWithListener.forEach(function (element) {
       element.addEventListener('click', handleScrollAndOpenClick);
     });
+
+    // Function to open the navigation menu
+    function openMenu() {
+      document.getElementById('navigationMenu').style.display = 'block';
+      document.getElementById('openMenuButton').style.display = 'none'; // Hide open button
+      document.getElementById('closeMenuButton').style.display = 'block'; // Show close button
+    }
+
+    // Function to close the navigation menu
+    function closeMenu() {
+      document.getElementById('navigationMenu').style.display = 'none';
+      document.getElementById('openMenuButton').style.display = 'block'; // Show open button
+      document.getElementById('closeMenuButton').style.display = 'none'; // Hide close button
+    }
+
+    // Add event listener to open menu button
+    document.getElementById('openMenuButton').addEventListener('click', openMenu);
+
+    // Add event listener to close menu button
+    document.getElementById('closeMenuButton').addEventListener('click', closeMenu);
+
+    // Function to check the scroll position and toggle the button
+    function toggleScrollButton() {
+      const openMenuButton = document.getElementById('openMenuButton');
+      const gitSection = document.getElementById('git');
+
+      // Calculate the top offset of the git section
+      const gitSectionTopOffset = gitSection.offsetTop;
+
+      // Get the current scroll position
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      // Set the scroll threshold to the top offset of the git section
+      const scrollThreshold = gitSectionTopOffset;
+
+      if (scrollPosition >= scrollThreshold) {
+        openMenuButton.style.display = 'block';
+      } else {
+        openMenuButton.style.display = 'none';
+      }
+    }
+
+    // Add event listener to the window's scroll event
+    window.addEventListener('scroll', toggleScrollButton);
   </script>
 </body>
 
