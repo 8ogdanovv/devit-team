@@ -10,17 +10,17 @@
     {
       display: block;
       border: 0.1rem solid #000;
+      width: calc(100vmin - 6rem);
       max-width: 80ch;
       position: relative;
       border-radius: 0.5rem;
-    }
-
-    pre
-    {
       position: relative;
-      left: -2.5rem;
-      top: 1.25rem;
       font-weight: bold;
+      overflow-x: auto; /* Enable horizontal scrolling when needed */
+      overflow-wrap: break-word; /* Allows word breaks */
+      height: fit-content;
+      height: auto;
+      padding: 2rem 1rem 0.75rem;
     }
 
     code::before
@@ -28,14 +28,18 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: calc(100% - 1rem);
+      width: 100vmax;
       height: 1rem;
       background-color: gray;
       content: attr(title);
       color: whitesmoke;
       padding: 0.25rem 0.5rem;
-      border-top-left-radius: 0.25rem;
-      border-top-right-radius: 0.25rem;
+    }
+
+    var
+    {
+      background-color: lightgray;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -55,15 +59,13 @@
       This will help keep the repository clean. Here's an example .gitignore for a JavaScript project:
 
       <code title=".gitignore">
-        <pre>
-          # Exclude temporary files and directories
-          node_modules/
-          .cache/
-
-          # Exclude IDE settings files
-          .vscode/
-          .idea/
-        </pre>
+        # Exclude temporary files and directories<br>
+        node_modules/<br>
+        .cache/<br>
+        <br>
+        # Exclude IDE settings files<br>
+        .vscode/<br>
+        .idea/
       </code>
     </li>
     <li>

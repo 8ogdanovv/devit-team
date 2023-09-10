@@ -10,17 +10,17 @@
     {
       display: block;
       border: 0.1rem solid #000;
+      width: calc(100vmin - 6rem);
       max-width: 80ch;
       position: relative;
       border-radius: 0.5rem;
-    }
-
-    pre
-    {
       position: relative;
-      left: -2.5rem;
-      top: 1.25rem;
       font-weight: bold;
+      overflow-x: auto; /* Enable horizontal scrolling when needed */
+      overflow-wrap: break-word; /* Allows word breaks */
+      height: fit-content;
+      height: auto;
+      padding: 2rem 1rem 0.75rem;
     }
 
     code::before
@@ -28,14 +28,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: calc(100% - 1rem);
+      width: 100vmax;
       height: 1rem;
       background-color: gray;
       content: attr(title);
       color: whitesmoke;
       padding: 0.25rem 0.5rem;
-      border-top-left-radius: 0.25rem;
-      border-top-right-radius: 0.25rem;
     }
 
     var
@@ -62,9 +60,7 @@
       To do this, go to the folder with your code via the command line and run the following command:
 
       <code title="bash">
-        <pre>
-          git init
-        </pre>
+        git init
       </code>
 
     </li>
@@ -76,10 +72,8 @@
       Use the following commands:
 
       <code title="bash">
-        <pre>
-          git add .
-          git commit -m "Your commit comment"
-        </pre>
+        git add .<br>
+        git commit -m "Your commit comment"
       </code>
     </li>
     <li>
@@ -91,9 +85,7 @@
       Run the command:
 
       <code title="bash">
-        <pre>
-          git remote add origin git@example.com:example/test.git
-        </pre>
+        git remote add origin git@example.com:example/test.git
       </code>
     </li>
     <li>
@@ -103,9 +95,7 @@
       Upload your code to the remote repository master branch:
 
       <code title="bash">
-        <pre>
-          git push -u origin master
-        </pre>
+        git push -u origin master
       </code>
 
       This command will push your code to the <var>master</var> branch of the remote repository. After this, you will be asked to enter credentials (username and password) to access the remote repository.

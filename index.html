@@ -159,20 +159,10 @@
         height: 90vmin;
       }
 
-      /* #js-logic > .solution > iframe.open, */
-      #deepEqual
+      #js-logic > .solution > iframe.open
       {
         height: 75vmax;
-      }
-
-      #chunkArray
-      {
-        height: 52vmax;
-      }
-
-      #bulkRun
-      {
-        height: 90vmax;
+        overflow-y: hidden;
       }
     }
 
@@ -194,20 +184,9 @@
         height: 90vmin;
       }
 
-      /* #js-logic > .solution > iframe.open, */
-      #deepEqual
+      #js-logic > .solution > iframe.open
       {
         height: 75vmin;
-      }
-
-      #chunkArray
-      {
-        height: 52vmin;
-      }
-
-      #bulkRun
-      {
-        height: 90vmin;
       }
     }
 
@@ -227,6 +206,14 @@
       left: -2.5rem;
       top: 1.75rem;
       font-weight: bold;
+      overflow-x: scroll;
+    }
+
+    @media (max-width: 768px) and (resolution: 72dpi) {
+      pre
+      {
+        padding-bottom: 1rem;
+      }
     }
 
     code::before
@@ -464,7 +451,6 @@
         <iframe
           id="deepEqual"
           src="./js-logic/function1-deepEqual.html"
-          onload="attachClickEvent(this)"
         ></iframe>
 
         <!-- <iframe
@@ -500,10 +486,7 @@
 
         <iframe
           id="chunkArray"
-          src="https://codesandbox.io/embed/typescript-playground-export-forked-fy2rrg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
-          title="TypeScript Playground Export (forked)"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          src="./js-logic/function2-chunkArray.html"
         ></iframe>
       </div>
 
@@ -542,10 +525,7 @@
 
         <iframe
           id="bulkRun"
-          src="https://codesandbox.io/embed/typescript-playground-export-forked-8d4td2?fontsize=14&hidenavigation=1&theme=dark&view=editor"
-          title="TypeScript Playground Export (forked)"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          src="./js-logic/function3-bulkRun.html"
         ></iframe>
       </div>
 
