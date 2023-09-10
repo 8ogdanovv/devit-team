@@ -270,8 +270,8 @@
       overflow-x: scroll;
     }
 
-    @media (max-width: 768px) and (resolution: 72dpi) {
-      pre
+    @media (max-width: 768px) or (resolution: 72dpi) {
+      #js-logic code
       {
         padding-bottom: 2rem;
       }
@@ -350,10 +350,22 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #0004;
-      /* display: none; */
-      filter: blur(1rem);
-      /* z-index: -1; */
+      background-color: #0008;
+      filter: blur(1.5rem);
+    }
+
+    #openMenuButton::before
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fffc;
+      z-index: -1;
+      filter: blur(1.5rem);
     }
 
     #openMenuButton > img
