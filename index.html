@@ -38,9 +38,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      font-size: 3.3vmin;
-      line-height: 9vmin;
     }
 
     header a
@@ -61,8 +58,8 @@
 
     header, footer
     {
+      font-size: 150%;
       background-image: linear-gradient(to bottom right, var(--azure), var(--gold));
-      /* Other CSS properties for .header and .footer */
     }
 
     address
@@ -83,16 +80,6 @@
     {
       text-decoration: none;
       display: inline-block;
-    }
-
-    /* section {
-      display: none;
-    } */
-
-    .footer-copyright
-    {
-      font-size: 3.3vmin;
-      line-height: 9vmin;
     }
 
     h1,
@@ -327,8 +314,6 @@
       padding: 20px;
       background-color: white;
       z-index: 1000;
-      /* box-shadow: 0px 0px 5vmax rgba(0, 0, 0, 0.5); */
-      /* border-radius: 1vmin; */
     }
 
     .close-button
@@ -336,7 +321,6 @@
       left: 50%;
     }
 
-    /* Style for the close button */
     .close-button,
     #openMenuButton
     {
@@ -349,10 +333,6 @@
       background-color: transparent;
     }
 
-    /* .close-button
-    {
-      border: 1vmin dashed black;
-    } */
 
     #openMenuButton
     {
@@ -403,6 +383,34 @@
       transform: scale(1.5) translate(-25%, 10%);
     }
 
+    .note {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        font-style: italic;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .note h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .note p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        font-size: 18px;
+        font-weight: bold;
+        color: #0074e4;
+    }
   </style>
 </head>
 
@@ -577,7 +585,7 @@
 
     <hr>
 
-    <section id="html-css">
+    <section id="layout">
       <h2>HTML/CSS Layout</h2>
 
       <img
@@ -645,6 +653,12 @@
 
     <section id="js-logic">
       <h2>JavaScript Logic</h2>
+
+      <div class="note">
+        <h3>Note</h3>
+        <p>All solutions have been implemented in TypeScript and are thoroughly documented with comments for clarity.</p>
+        <p class="message">"As mentioned as best variety"</p>
+      </div>
 
       <strong>
         Task
