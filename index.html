@@ -38,6 +38,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      line-break: anywhere;
+
+      min-height: max-content;
     }
 
     header a
@@ -274,10 +278,22 @@
     }
 
     @media (max-width: 768px) or (resolution: 72dpi) {
+
+
       #js-logic code
       {
         padding-bottom: 2rem;
       }
+
+
+      .close-button,
+      #openMenuButton
+      {
+        width: 6vmax !important;
+        height: 6vmax !important;
+      }
+
+      
     }
 
     code::before
@@ -301,7 +317,6 @@
       font-weight: bold;
     }
 
-    /* CSS for the navigation menu */
     .menu
     {
       display: none;
@@ -314,6 +329,10 @@
       padding: 20px;
       background-color: white;
       z-index: 1000;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
     }
 
     .close-button
@@ -331,6 +350,8 @@
       border-radius: 50%;
       transform: translate(-50%, -50%);
       background-color: transparent;
+
+      min-width: 2.5rem;
     }
 
 
@@ -411,6 +432,7 @@
         font-weight: bold;
         color: #0074e4;
     }
+
   </style>
 </head>
 
