@@ -186,6 +186,10 @@
       margin: 0;
     }
 
+    /* section {
+      display: none;
+    } */
+
     @media (orientation: portrait) {
       iframe.open
       {
@@ -277,7 +281,7 @@
       overflow-x: scroll;
     }
 
-    @media (max-width: 768px) or (resolution: 72dpi) {
+    @media (max-width: 768px), (resolution: 72dpi) {
 
 
       #js-logic code
@@ -292,8 +296,66 @@
         width: 6vmax !important;
         height: 6vmax !important;
       }
+    }
 
-      
+    @media (max-width: 768px) and (orientation: landscape)
+      ,(max-height: 720px) and (orientation: landscape)
+      ,(resolution: 72dpi) and (orientation: landscape)
+    {
+
+      #navigationMenu nav
+      {
+        height: calc(100% - 3rem);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #navigationMenu nav > ul
+      {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        align-content: center;
+        justify-items: center;
+      }
+
+      #navigationMenu nav > ul > li
+      {
+        display: grid;
+        grid-template-columns: 4rem 1fr;
+        justify-items: center;
+      }
+
+      #navigationMenu nav > ul > li > a:first-of-type
+      {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #navigationMenu nav > ul > li > ul
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 555px) and (orientation: landscape)
+      ,(max-height: 555px) and (orientation: landscape)
+      ,(resolution: 72dpi) and (orientation: landscape)
+    {
+
+      #navigationMenu nav
+      {
+        font-size: 75%;
+        line-height: 100%;
+      }
     }
 
     code::before
@@ -478,14 +540,16 @@
 
       <nav>
         <ul>
-          <li><a href="#git">=== GIT ===</a>
+          <li>
+            <a href="#git">=== GIT ===</a>
             <ul>
               <li><a href="#git1_basic" class="scroll_and_open">git - basic</a></li>
               <li><a href="#git2_extended" class="scroll_and_open">git - extended</a></li>
             </ul>
           </li>
 
-          <li><a href="#layout">=== CSS, HTML ===</a>
+          <li>
+            <a href="#layout">=== CSS, HTML ===</a>
             <ul>
               <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
               <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid layout</a></li>
