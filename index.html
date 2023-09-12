@@ -281,6 +281,30 @@
       overflow-x: scroll;
     }
 
+    .menu
+    {
+      display: none;
+      position: fixed;
+      width: 100dvw;
+      height: 100dvh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      z-index: 1000;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    #navigationMenu nav
+    {
+      font-size: 100%;
+      line-height: 120%;
+    }
+
     @media (max-width: 768px), (resolution: 72dpi) {
 
 
@@ -377,30 +401,6 @@
     {
       background-color: lightgray;
       font-weight: bold;
-    }
-
-    .menu
-    {
-      display: none;
-      position: fixed;
-      width: 100dvw;
-      height: 100dvh;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: white;
-      z-index: 1000;
-      overflow: hidden;
-      padding: 0;
-      margin: 0;
-      font-size: 1rem;
-    }
-
-    #navigationMenu nav
-    {
-      font-size: 100%;
-      line-height: 120%;
     }
 
     .close-button
