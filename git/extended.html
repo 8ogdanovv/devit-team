@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>git-extended</title>
   <style>
-    code
-    {
+    code {
       display: block;
       border: 0.1rem solid #000;
       width: calc(100vmin - 6rem);
@@ -16,15 +15,16 @@
       border-radius: 0.5rem;
       position: relative;
       font-weight: bold;
-      overflow-x: auto; /* Enable horizontal scrolling when needed */
-      overflow-wrap: break-word; /* Allows word breaks */
+      overflow-x: auto;
+      /* Enable horizontal scrolling when needed */
+      overflow-wrap: break-word;
+      /* Allows word breaks */
       height: fit-content;
       height: auto;
       padding: 2rem 1rem 0.75rem;
     }
 
-    code::before
-    {
+    code::before {
       position: absolute;
       top: 0;
       left: 0;
@@ -36,8 +36,7 @@
       padding: 0.25rem 0.5rem;
     }
 
-    var
-    {
+    var {
       background-color: lightgray;
       font-weight: bold;
     }
@@ -47,16 +46,19 @@
 <body>
   <p>
     <u>Using Git for code management is a great solution</u>, but <em>there are
-    <strong>a few additional steps</strong> and best practices</em>,
-    that can improve your code's overall maintainability and client collaboration:
+      <strong>a few additional steps</strong> and best practices</em>,
+    that can improve your code's overall maintainability and client
+    collaboration:
   </p>
 
   <ul>
     <li>
       <strong>Create a .gitignore file:</strong>
-      Create a .gitignore file to exclude files and folders that should not go into the repository
+      Create a .gitignore file to exclude files and folders that should not go
+      into the repository
       (for example, temporary files, dependencies, IDE settings files).
-      This will help keep the repository clean. Here's an example .gitignore for a JavaScript project:
+      This will help keep the repository clean. Here's an example .gitignore for
+      a JavaScript project:
 
       <code title=".gitignore">
         # Exclude temporary files and directories<br>
@@ -72,32 +74,40 @@
       <strong>
         Create a development branch:
       </strong>
-      It is a good practice to create a development branch (for example, develop)
+      It is a good practice to create a development branch (for example,
+      develop)
       in which you will develop and integrate new features.
-      Once the code has been tested and is ready for release, you can merge it into the master branch for release.
+      Once the code has been tested and is ready for release, you can merge it
+      into the master branch for release.
     </li>
     <li>
       <strong>
         Use commit comments:
       </strong>
-      Try to write informative commit comments to make it clear what changes have been made.
-      Well-formatted comments will help you and other developers understand the history of changes in the project.
+      Try to write informative commit comments to make it clear what changes
+      have been made.
+      Well-formatted comments will help you and other developers understand the
+      history of changes in the project.
     </li>
     <li>
       <strong>
         Continuous Integration (CI):
       </strong>
       Set up a CI system such as Travis CI, CircleCI, GitHub Actions,
-      and others to automate the process of building and testing your code with every commit.
+      and others to automate the process of building and testing your code with
+      every commit.
       This will allow you to quickly identify and correct errors.
     </li>
     <li>
       <strong>
         Pull Request (PR) or Merge Request (MR):
       </strong>
-      Instead of directly uploading code to master, it is recommended to create a PR or MR.
-      This allows other developers to review and discuss changes before merging them into master.
-      You will be able to get feedback and ensure that the code meets the standards.
+      Instead of directly uploading code to master, it is recommended to create
+      a PR or MR.
+      This allows other developers to review and discuss changes before merging
+      them into master.
+      You will be able to get feedback and ensure that the code meets the
+      standards.
     </li>
     <li>
       <strong>
@@ -110,22 +120,26 @@
       <strong>
         Documentation:
       </strong>
-      Maintain project documentation, including a README file with installation and usage instructions.
+      Maintain project documentation, including a README file with installation
+      and usage instructions.
       This will help other developers and users quickly understand the project.
     </li>
     <li>
       <strong>
         Dependency version control:
       </strong>
-      Use package.json files (for Node.js projects) or similar for other languages and platforms.
-      This allows dependency versions to be fixed and compatibility to be ensured.
+      Use package.json files (for Node.js projects) or similar for other
+      languages and platforms.
+      This allows dependency versions to be fixed and compatibility to be
+      ensured.
     </li>
   </ul>
 
   <p>
     <strong>
       <em>
-        These practices will help you improve the maintainability of your code and make it easier to collaborate with your client.
+        These practices will help you improve the maintainability of your code
+        and make it easier to collaborate with your client.
       </em>
     </strong>
   </p>

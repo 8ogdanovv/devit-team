@@ -6,16 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>layouts - animation</title>
   <style>
-    body
-    {
+    body {
       width: 100%;
       margin: 0;
       padding: 0;
       overflow: hidden;
     }
 
-    .animation
-    {
+    .animation {
       font-size: 4vmin;
       text-transform: uppercase;
       font-weight: bold;
@@ -28,41 +26,35 @@
       padding: 5vmin 9vmin 5vmin;
     }
 
-    @keyframes rotation
-    {
-      from
-      {
+    @keyframes rotation {
+      from {
         transform: translate(-50%, -50%) rotate(0);
       }
-      to
-      {
+
+      to {
         transform: translate(-50%, -50%) rotate(1turn);
       }
     }
 
-    @keyframes colorChanging
-    {
-      0%
-      {
+    @keyframes colorChanging {
+      0% {
         background-color: red;
       }
-      34%
-      {
+
+      34% {
         background-color: orange;
       }
-      67%
-      {
+
+      67% {
         background-color: green;
       }
     }
 
-    .animation
-    {
+    .animation {
       position: relative;
     }
 
-    .square
-    {
+    .square {
       position: absolute;
       width: 50vmin;
       height: 50vmin;

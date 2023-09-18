@@ -10,17 +10,18 @@
     type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
   <meta name="description"
     content="We are developers who adore their work. We create websites, blogs, landings of various complexity for your brand. Also, we make own products. Developing and learning every day is our principle of life. Thus, in work we use only modern technologies.">
   <style>
-    :root
-    {
+    :root {
       --azure: #0056B9;
       --gold: #FFD800;
     }
-    body
-    {
+
+    body {
       font-family: 'Victor Mono', monospace;
       margin: 0;
       padding: 0;
@@ -28,8 +29,7 @@
       font-weight: 500;
     }
 
-    header
-    {
+    header {
       background-color: var(--azure);
       color: #fff;
       padding: 20px 0;
@@ -44,14 +44,12 @@
       min-height: max-content;
     }
 
-    header a
-    {
+    header a {
       display: inline-block;
       margin: 3vmin;
     }
 
-    footer
-    {
+    footer {
       background-color: var(--gold);
       color: #000;
       padding: 20px;
@@ -60,14 +58,13 @@
       bottom: 0;
     }
 
-    header, footer
-    {
+    header,
+    footer {
       font-size: 150%;
       background-image: linear-gradient(to bottom right, var(--azure), var(--gold));
     }
 
-    address
-    {
+    address {
       width: 90vmin;
       display: flex;
       justify-content: space-between;
@@ -75,13 +72,11 @@
       margin: 0 auto;
     }
 
-    address a img
-    {
+    address a img {
       width: 9vmin;
     }
 
-    address a
-    {
+    address a {
       text-decoration: none;
       display: inline-block;
     }
@@ -91,8 +86,7 @@
       margin: 0;
     }
 
-    h2
-    {
+    h2 {
       margin-bottom: 0;
     }
 
@@ -118,13 +112,12 @@
     h2,
     h3,
     ul,
-    .main > p:first-of-type,
-    .main > p:nth-of-type(2) {
+    .main>p:first-of-type,
+    .main>p:nth-of-type(2) {
       text-align: center;
     }
 
-    li > ul
-    {
+    li>ul {
       font-size: smaller;
       margin-top: 0.5rem;
     }
@@ -133,36 +126,31 @@
       color: inherit;
     }
 
-    .layout_image
-    {
+    .layout_image {
       display: block;
       margin: 0 auto;
 
       max-width: 100%;
     }
 
-    ul > li > a
-    {
+    ul>li>a {
       font-weight: 600;
       font-size: 150%;
     }
 
-    iframe:not(.open)
-    {
+    iframe:not(.open) {
       height: 0 !important;
       transition: height 500ms;
       overflow: hidden;
       width: calc(100% - 0.25rem);
     }
 
-    iframe.open
-    {
+    iframe.open {
       height: auto;
       transition: height 500ms;
     }
 
-    section h3
-    {
+    section h3 {
       cursor: pointer;
     }
 
@@ -173,51 +161,40 @@
     }
 
     code,
-    pre
-    {
+    pre {
       width: 100%;
       overflow-x: scroll;
     }
 
-    section+hr
-    {
+    section+hr {
       height: 4px;
       background-color: #9a9a9a;
       margin: 0;
     }
 
-    /* section {
-      display: none;
-    } */
-
     @media (orientation: portrait) {
-      iframe.open
-      {
+      iframe.open {
         height: 90vmax;
       }
 
       #flex,
       #grid,
-      #animation
-      {
+      #animation {
         height: 90vmin;
       }
 
-      #js-logic > .solution > iframe.open
-      {
+      #js-logic>.solution>iframe.open {
         height: 75vmax;
         overflow-y: hidden;
       }
 
-      .close-button
-      {
+      .close-button {
         width: 5vmax;
         height: 5vmax;
         bottom: 3vmax;
       }
 
-      #openMenuButton
-      {
+      #openMenuButton {
         width: 5vmax;
         height: 5vmax;
         right: 3vmax;
@@ -225,45 +202,38 @@
     }
 
     @media (orientation: landscape) {
-      #gb.open
-      {
+      #gb.open {
         height: 85vmin;
       }
 
-      #extended.open
-      {
+      #extended.open {
         height: 105vmin;
       }
 
       #flex,
       #grid,
-      #animation
-      {
+      #animation {
         height: 90vmin;
       }
 
-      #js-logic > .solution > iframe.open
-      {
+      #js-logic>.solution>iframe.open {
         height: 75vmin;
       }
 
-      .close-button
-      {
+      .close-button {
         width: 5vmin;
         height: 5vmin;
         bottom: 3vmin;
       }
 
-      #openMenuButton
-      {
+      #openMenuButton {
         width: 5vmin;
         height: 5vmin;
         right: 3vmin;
       }
     }
 
-    code
-    {
+    code {
       display: block;
       border: 0.1rem solid #000;
       max-width: 100%;
@@ -272,8 +242,7 @@
       overflow-y: hidden;
     }
 
-    pre
-    {
+    pre {
       position: relative;
       left: -2.5rem;
       top: 1.75rem;
@@ -281,8 +250,7 @@
       overflow-x: scroll;
     }
 
-    .menu
-    {
+    .menu {
       display: none;
       position: fixed;
       width: 100dvw;
@@ -299,36 +267,32 @@
       font-size: 0.9rem;
     }
 
-    #navigationMenu nav
-    {
+    #navigationMenu nav {
       font-size: 100%;
       line-height: 120%;
     }
 
-    @media (max-width: 768px), (resolution: 72dpi) {
+    @media (max-width: 768px),
+    (resolution: 72dpi) {
 
 
-      #js-logic code
-      {
+      #js-logic code {
         padding-bottom: 2rem;
       }
 
 
       .close-button,
-      #openMenuButton
-      {
+      #openMenuButton {
         width: 6vmax !important;
         height: 6vmax !important;
       }
     }
 
-    @media (max-width: 768px) and (orientation: landscape)
-      ,(max-height: 720px) and (orientation: landscape)
-      ,(resolution: 72dpi) and (orientation: landscape)
-    {
+    @media (max-width: 768px) and (orientation: landscape),
+    (max-height: 720px) and (orientation: landscape),
+    (resolution: 72dpi) and (orientation: landscape) {
 
-      #navigationMenu nav
-      {
+      #navigationMenu nav {
         height: calc(100% - 3rem);
         display: flex;
         align-items: center;
@@ -336,23 +300,20 @@
         justify-content: center;
       }
 
-      #navigationMenu nav > ul
-      {
+      #navigationMenu nav>ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1.5fr;
         align-content: center;
         justify-items: center;
       }
 
-      #navigationMenu nav > ul > li
-      {
+      #navigationMenu nav>ul>li {
         display: grid;
         grid-template-columns: 4rem 1fr;
         justify-items: center;
       }
 
-      #navigationMenu nav > ul > li > a:first-of-type
-      {
+      #navigationMenu nav>ul>li>a:first-of-type {
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         display: flex;
@@ -360,8 +321,7 @@
         align-items: center;
       }
 
-      #navigationMenu nav > ul > li > ul
-      {
+      #navigationMenu nav>ul>li>ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -370,20 +330,17 @@
       }
     }
 
-    @media (max-width: 555px) and (orientation: landscape)
-      ,(max-height: 555px) and (orientation: landscape)
-      ,(resolution: 72dpi) and (orientation: landscape)
-    {
+    @media (max-width: 555px) and (orientation: landscape),
+    (max-height: 555px) and (orientation: landscape),
+    (resolution: 72dpi) and (orientation: landscape) {
 
-      #navigationMenu nav
-      {
+      #navigationMenu nav {
         font-size: 75%;
         line-height: 100%;
       }
     }
 
-    code::before
-    {
+    code::before {
       position: absolute;
       top: 0;
       left: 0;
@@ -397,20 +354,17 @@
       border-top-right-radius: 0.25rem;
     }
 
-    var
-    {
+    var {
       background-color: lightgray;
       font-weight: bold;
     }
 
-    .close-button
-    {
+    .close-button {
       left: 50%;
     }
 
     .close-button,
-    #openMenuButton
-    {
+    #openMenuButton {
       position: fixed;
       font-weight: bold;
       border: none;
@@ -423,16 +377,14 @@
     }
 
 
-    #openMenuButton
-    {
+    #openMenuButton {
       background-color: transparent;
       display: none;
       z-index: 1;
       top: 50%;
     }
 
-    #openMenuButton::after
-    {
+    #openMenuButton::after {
       content: '';
       position: absolute;
       top: 0;
@@ -444,8 +396,7 @@
       filter: blur(1.5rem);
     }
 
-    #openMenuButton::before
-    {
+    #openMenuButton::before {
       content: '';
       position: absolute;
       top: 0;
@@ -458,56 +409,54 @@
       filter: blur(1.5rem);
     }
 
-    #openMenuButton > img,
-    .close-button > img
-    {
+    #openMenuButton>img,
+    .close-button>img {
       width: 100%;
       height: auto;
     }
 
-    .close-button > img
-    {
+    .close-button>img {
       width: 100%;
       height: auto;
       transform: scale(1.5) translate(-25%, 10%);
     }
 
     .note {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 1rem;
-        font-style: italic;
-        text-align: left;
-        margin-bottom: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      font-style: italic;
+      text-align: left;
+      margin-bottom: 1rem;
     }
 
     .note h3 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 10px;
-        text-align: left;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: left;
     }
 
     .note p {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 20px;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
     }
 
     .message {
-        font-size: 18px;
-        font-weight: bold;
-        color: #0074e4;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0074e4;
     }
-
   </style>
 </head>
 
 <body>
   <header>
     <a href="https://devit-team.com/">
-      <img src="https://devit-team.com/app/uploads/2019/01/logo.svg" alt="DevIT logo" style="width: 25vmin;">
+      <img src="https://devit-team.com/app/uploads/2019/01/logo.svg"
+        alt="DevIT logo" style="width: 25vmin;">
     </a>
 
 
@@ -538,43 +487,58 @@
 
     <!-- Navigation menu -->
     <div id="navigationMenu" class="menu">
-      <h2 style="background-color: black; color: white;">Navigate Through the Tasks</h2>
+      <h2 style="background-color: black; color: white;">Navigate Through the
+        Tasks</h2>
 
       <button id="closeMenuButton" class="close-button">
-        <img src="./assets/black-circle-close-button-png-5.png" alt="close button">
+        <img src="./assets/black-circle-close-button-png-5.png"
+          alt="close button">
       </button>
 
       <nav>
         <ul>
           <li>
-            <a href="#git">=== GIT ===</a>
+            <a href="#git" onclick="closeMenu()">=== GIT ===</a>
             <ul>
-              <li><a href="#git1_basic" class="scroll_and_open">git - basic</a></li>
-              <li><a href="#git2_extended" class="scroll_and_open">git - extended</a></li>
+              <li><a href="#git1_basic" class="scroll_and_open">git - basic</a>
+              </li>
+              <li><a href="#git2_extended" class="scroll_and_open">git -
+                  extended</a></li>
             </ul>
           </li>
 
           <li>
-            <a href="#layout">=== CSS, HTML ===</a>
+            <a href="#layout" onclick="closeMenu()">=== CSS, HTML ===</a>
             <ul>
-              <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
-              <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid layout</a></li>
-              <li><a href="#layout3_animation" class="scroll_and_open">Animation layout</a>
+              <li><a href="#layout1_flex" class="scroll_and_open">Flexbox
+                  layout</a></li>
+              <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid
+                  layout</a></li>
+              <li><a href="#layout3_animation" class="scroll_and_open">Animation
+                  layout</a>
               </li>
             </ul>
           </li>
 
           <li>
-            <a href="#js-logic">=== JS Logic ===</a>
+            <a href="#js-logic" onclick="closeMenu()">=== JS Logic ===</a>
             <ul>
-              <li><a href="#js1" class="scroll_and_open">deepEqual Function</a></li>
-              <li><a href="#js2" class="scroll_and_open">chunkArray Function</a></li>
-              <li><a href="#js3" class="scroll_and_open">bulkRun Function</a></li>
-              <li><a href="#js4" class="scroll_and_open">arrayToObject Function</a></li>
-              <li><a href="#js5" class="scroll_and_open">objectToArray Function</a></li>
-              <li><a href="#js6" class="scroll_and_open">reliableMultiply Function</a></li>
-              <li><a href="#js7" class="scroll_and_open">mapObject Function</a></li>
-              <li><a href="#js8" class="scroll_and_open">combos Function</a></li>
+              <li><a href="#js1" class="scroll_and_open">deepEqual Function</a>
+              </li>
+              <li><a href="#js2" class="scroll_and_open">chunkArray Function</a>
+              </li>
+              <li><a href="#js3" class="scroll_and_open">bulkRun Function</a>
+              </li>
+              <li><a href="#js4" class="scroll_and_open">arrayToObject
+                  Function</a></li>
+              <li><a href="#js5" class="scroll_and_open">objectToArray
+                  Function</a></li>
+              <li><a href="#js6" class="scroll_and_open">reliableMultiply
+                  Function</a></li>
+              <li><a href="#js7" class="scroll_and_open">mapObject Function</a>
+              </li>
+              <li><a href="#js8" class="scroll_and_open">combos Function</a>
+              </li>
               <li><a href="#js9" class="scroll_and_open">add Function</a></li>
             </ul>
           </li>
@@ -588,16 +552,21 @@
       <ul>
         <li><a href="#git">=== GIT ===</a>
           <ul>
-            <li><a href="#git1_basic" class="scroll_and_open">git - basic</a></li>
-            <li><a href="#git2_extended" class="scroll_and_open">git - extended</a></li>
+            <li><a href="#git1_basic" class="scroll_and_open">git - basic</a>
+            </li>
+            <li><a href="#git2_extended" class="scroll_and_open">git -
+                extended</a></li>
           </ul>
         </li>
 
         <li><a href="#layout">=== CSS, HTML ===</a>
           <ul>
-            <li><a href="#layout1_flex" class="scroll_and_open">Flexbox layout</a></li>
-            <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid layout</a></li>
-            <li><a href="#layout3_animation" class="scroll_and_open">Animation layout</a>
+            <li><a href="#layout1_flex" class="scroll_and_open">Flexbox
+                layout</a></li>
+            <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid
+                layout</a></li>
+            <li><a href="#layout3_animation" class="scroll_and_open">Animation
+                layout</a>
             </li>
           </ul>
         </li>
@@ -605,13 +574,19 @@
         <li>
           <a href="#js-logic">=== JS Logic ===</a>
           <ul>
-            <li><a href="#js1" class="scroll_and_open">deepEqual Function</a></li>
-            <li><a href="#js2" class="scroll_and_open">chunkArray Function</a></li>
+            <li><a href="#js1" class="scroll_and_open">deepEqual Function</a>
+            </li>
+            <li><a href="#js2" class="scroll_and_open">chunkArray Function</a>
+            </li>
             <li><a href="#js3" class="scroll_and_open">bulkRun Function</a></li>
-            <li><a href="#js4" class="scroll_and_open">arrayToObject Function</a></li>
-            <li><a href="#js5" class="scroll_and_open">objectToArray Function</a></li>
-            <li><a href="#js6" class="scroll_and_open">reliableMultiply Function</a></li>
-            <li><a href="#js7" class="scroll_and_open">mapObject Function</a></li>
+            <li><a href="#js4" class="scroll_and_open">arrayToObject
+                Function</a></li>
+            <li><a href="#js5" class="scroll_and_open">objectToArray
+                Function</a></li>
+            <li><a href="#js6" class="scroll_and_open">reliableMultiply
+                Function</a></li>
+            <li><a href="#js7" class="scroll_and_open">mapObject Function</a>
+            </li>
             <li><a href="#js8" class="scroll_and_open">combos Function</a></li>
             <li><a href="#js9" class="scroll_and_open">add Function</a></li>
           </ul>
@@ -642,35 +617,32 @@
 
       <p>
         Describe your next steps to make your code appear in the 'master' branch
-        of the repository at <a href="mailto:git@example.com">git@example.com</a>:example/test.git.
+        of the repository at <a
+          href="mailto:git@example.com">git@example.com</a>:example/test.git.
       </p>
 
       <hr>
 
-      <div class="solution" id="git1_basic" onclick="toggleOpen(document.getElementById('gb'))">
+      <div class="solution" id="git1_basic"
+        onclick="toggleOpen(document.getElementById('gb'))">
         <h3>
           solution - basic
         </h3>
 
-        <iframe
-        id="gb"
-        src="./git/basic.html"
-        onload="attachClickEvent(this)"
-        ></iframe>
+        <iframe id="gb" src="./git/basic.html"
+          onload="attachClickEvent(this)"></iframe>
       </div>
 
       <hr>
 
-      <div class="solution" id="git2_extended" onclick="toggleOpen(document.getElementById('extended'))">
+      <div class="solution" id="git2_extended"
+        onclick="toggleOpen(document.getElementById('extended'))">
         <h3>
           solution - extended
         </h3>
 
-        <iframe
-          id="extended"
-          src="./git/extended.html"
-          onload="attachClickEvent(this)"
-        ></iframe>
+        <iframe id="extended" src="./git/extended.html"
+          onload="attachClickEvent(this)"></iframe>
       </div>
 
     </section>
@@ -680,11 +652,9 @@
     <section id="layout">
       <h2>HTML/CSS Layout</h2>
 
-      <img
-        class="layout_image"
+      <img class="layout_image"
         src="https://cloud.devit.group/apps/files_sharing/publicpreview/PgiakbTLHFdBddo?file=/Sandbox%20-%204.%20HTML%20Layout.png&fileId=769835&x=1920&y=1080&a=true"
-        alt="flexbox and grid overview layout"
-      >
+        alt="flexbox and grid overview layout">
 
       <strong>
         Task
@@ -696,14 +666,12 @@
 
       <hr>
 
-      <div class="solution" id="layout1_flex" onclick="toggleOpen(document.getElementById('flex'))">
+      <div class="solution" id="layout1_flex"
+        onclick="toggleOpen(document.getElementById('flex'))">
         <h3>solution - flexbox</h3>
 
-        <iframe
-          id="flex"
-          src="./layouts/flex.html"
-          onload="attachClickEvent(this)"
-        ></iframe>
+        <iframe id="flex" src="./layouts/flex.html"
+          onload="attachClickEvent(this)"></iframe>
       </div>
 
       <p>
@@ -712,14 +680,12 @@
 
       <hr>
 
-      <div class="solution" id="layout2_grid" onclick="toggleOpen(document.getElementById('grid'))">
+      <div class="solution" id="layout2_grid"
+        onclick="toggleOpen(document.getElementById('grid'))">
         <h3>solution - grid</h3>
 
-        <iframe
-          id="grid"
-          src="./layouts/grid.html"
-          onload="attachClickEvent(this)"
-        ></iframe>
+        <iframe id="grid" src="./layouts/grid.html"
+          onload="attachClickEvent(this)"></iframe>
       </div>
 
       <p>
@@ -729,14 +695,12 @@
 
       <hr>
 
-      <div class="solution" id="layout3_animation" onclick="toggleOpen(document.getElementById('animation'))">
+      <div class="solution" id="layout3_animation"
+        onclick="toggleOpen(document.getElementById('animation'))">
         <h3>solution - animation</h3>
 
-        <iframe
-          id="animation"
-          src="./layouts/animation.html"
-          onload="attachClickEvent(this)"
-        ></iframe>
+        <iframe id="animation" src="./layouts/animation.html"
+          onload="attachClickEvent(this)"></iframe>
       </div>
 
     </section>
@@ -748,7 +712,8 @@
 
       <div class="note">
         <h3>Note</h3>
-        <p>All solutions have been implemented in TypeScript and are thoroughly documented with comments for clarity.</p>
+        <p>All solutions have been implemented in TypeScript and are thoroughly
+          documented with comments for clarity.</p>
         <p class="message">"As mentioned as best variety"</p>
       </div>
 
@@ -771,15 +736,14 @@
 
       <hr>
 
-      <div class="solution" id="js1" onclick="toggleOpen(document.getElementById('deepEqual'))">
+      <div class="solution" id="js1"
+        onclick="toggleOpen(document.getElementById('deepEqual'))">
         <h3>
           solution - deepEqual
         </h3>
 
-        <iframe
-          id="deepEqual"
-          src="./js-logic/function1-deepEqual.html"
-        ></iframe>
+        <iframe id="deepEqual"
+          src="./js-logic/function1-deepEqual.html"></iframe>
       </div>
 
       <p>
@@ -799,15 +763,14 @@
 
       <hr>
 
-      <div class="solution" id="js2" onclick="toggleOpen(document.getElementById('chunkArray'))">
+      <div class="solution" id="js2"
+        onclick="toggleOpen(document.getElementById('chunkArray'))">
         <h3>
           solution - chunkArray
         </h3>
 
-        <iframe
-          id="chunkArray"
-          src="./js-logic/function2-chunkArray.html"
-        ></iframe>
+        <iframe id="chunkArray"
+          src="./js-logic/function2-chunkArray.html"></iframe>
       </div>
 
       <hr>
@@ -838,15 +801,13 @@
 
       <hr>
 
-      <div class="solution" id="js3" onclick="toggleOpen(document.getElementById('bulkRun'))">
+      <div class="solution" id="js3"
+        onclick="toggleOpen(document.getElementById('bulkRun'))">
         <h3>
           solution - bulkRun
         </h3>
 
-        <iframe
-          id="bulkRun"
-          src="./js-logic/function3-bulkRun.html"
-        ></iframe>
+        <iframe id="bulkRun" src="./js-logic/function3-bulkRun.html"></iframe>
       </div>
 
       <hr>
@@ -874,15 +835,14 @@
 
       <hr>
 
-      <div class="solution" id="js4" onclick="toggleOpen(document.getElementById('arrayToObject'))">
+      <div class="solution" id="js4"
+        onclick="toggleOpen(document.getElementById('arrayToObject'))">
         <h3>
           solution - arrayToObject
         </h3>
 
-        <iframe
-          id="arrayToObject"
-          src="./js-logic/function4-arrayToObject.html"
-        ></iframe>
+        <iframe id="arrayToObject"
+          src="./js-logic/function4-arrayToObject.html"></iframe>
       </div>
 
       <hr>
@@ -910,15 +870,14 @@
 
       <hr>
 
-      <div class="solution" id="js5" onclick="toggleOpen(document.getElementById('objectToArray'))">
+      <div class="solution" id="js5"
+        onclick="toggleOpen(document.getElementById('objectToArray'))">
         <h3>
           solution - objectToArray
         </h3>
 
-        <iframe
-          id="objectToArray"
-          src="./js-logic/function5-objectToArray.html"
-        ></iframe>
+        <iframe id="objectToArray"
+          src="./js-logic/function5-objectToArray.html"></iframe>
       </div>
 
       <hr>
@@ -957,15 +916,14 @@
 
       <hr>
 
-      <div class="solution" id="js6" onclick="toggleOpen(document.getElementById('reliableMultiply'))">
+      <div class="solution" id="js6"
+        onclick="toggleOpen(document.getElementById('reliableMultiply'))">
         <h3>
           solution - reliableMultiply
         </h3>
 
-        <iframe
-          id="reliableMultiply"
-          src="./js-logic/function6-reliableMultiply.html"
-        ></iframe>
+        <iframe id="reliableMultiply"
+          src="./js-logic/function6-reliableMultiply.html"></iframe>
       </div>
 
       <hr>
@@ -999,15 +957,14 @@
 
       <hr>
 
-      <div class="solution" id="js7" onclick="toggleOpen(document.getElementById('mapObject'))">
+      <div class="solution" id="js7"
+        onclick="toggleOpen(document.getElementById('mapObject'))">
         <h3>
           solution - mapObject
         </h3>
 
-        <iframe
-          id="mapObject"
-          src="./js-logic/function7-mapObject.html"
-        ></iframe>
+        <iframe id="mapObject"
+          src="./js-logic/function7-mapObject.html"></iframe>
       </div>
 
       <hr>
@@ -1080,15 +1037,13 @@
 
       <hr>
 
-      <div class="solution" id="js8" onclick="toggleOpen(document.getElementById('combos'))">
+      <div class="solution" id="js8"
+        onclick="toggleOpen(document.getElementById('combos'))">
         <h3>
           solution - combos
         </h3>
 
-        <iframe
-          id="combos"
-          src="./js-logic/function8-combos.html"
-        ></iframe>
+        <iframe id="combos" src="./js-logic/function8-combos.html"></iframe>
       </div>
 
       <hr>
@@ -1110,15 +1065,13 @@
 
       <hr>
 
-      <div class="solution" id="js9" onclick="toggleOpen(document.getElementById('add'))">
+      <div class="solution" id="js9"
+        onclick="toggleOpen(document.getElementById('add'))">
         <h3>
           solution - add
         </h3>
 
-        <iframe
-          id="add"
-          src="./js-logic/function9-add.html"
-        ></iframe>
+        <iframe id="add" src="./js-logic/function9-add.html"></iframe>
       </div>
     </section>
   </main>
@@ -1154,11 +1107,14 @@
     </address>
 
     <p class="footer-copyright">
-      <a href="https://drive.google.com/file/d/1kKBqudjqLXKSCDFw2MJvFFdSTL3ikhLP/view?usp=drive_link" >
-        &copy; 2023 Vadym Chervoniak * Full-stack developer (č) auto-biography coder
+      <a
+        href="https://drive.google.com/file/d/1kKBqudjqLXKSCDFw2MJvFFdSTL3ikhLP/view?usp=drive_link">
+        &copy; 2023 Vadym Chervoniak * Full-stack developer (č) auto-biography
+        coder
       </a>
       <br />
-      <span class="contacts">+380505444199 | @vadym4che | vadym4che@gmail.com</span>
+      <span class="contacts">+380505444199 | @vadym4che |
+        vadym4che@gmail.com</span>
     </p>
   </footer>
 
@@ -1179,7 +1135,7 @@
     }
 
     function attachClickEvent(iframe) {
-      iframe.contentWindow.document.body.addEventListener('click', function() {
+      iframe.contentWindow.document.body.addEventListener('click', function () {
         toggleOpen(iframe);
       });
     }
