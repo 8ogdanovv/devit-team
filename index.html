@@ -1213,20 +1213,26 @@
     }
 
     // Function to clear cache
-    function clearCache() {
+    function clearCacheAndSetFlag() {
       if (window.location.reload) {
-          // Perform a forced reload (ignoring cache) of the current page
-          window.location.reload(true);
+        // Perform a forced reload (ignoring cache) of the current page
+        window.location.reload(true);
       } else {
-          // Fallback method for older browsers
-          window.location.href = window.location.href;
+        // Fallback method for older browsers
+        window.location.href = window.location.href;
       }
     }
 
-    // Call the clearCache function on page load
-    window.onload = function () {
-        clearCache();
-    };
+    // Check if the flag exists in local storage
+    const cleanUpdateFlag = localStorage.getItem('cleanUpdate');
+
+    if (!cleanUpdateFlag) {
+      // Flag doesn't exist, clear cache and set the flag
+      clearCacheAndSetFlag();
+
+      // Set the flag in local storage to prevent future cache clearing
+      localStorage.setItem('cleanUpdate', 'true');
+    }
 
     // Add event listener to the window's scroll event
     window.addEventListener('scroll', toggleScrollButton);
