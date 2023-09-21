@@ -1212,6 +1212,22 @@
       }
     }
 
+    // Function to clear cache
+    function clearCache() {
+      if (window.location.reload) {
+          // Perform a forced reload (ignoring cache) of the current page
+          window.location.reload(true);
+      } else {
+          // Fallback method for older browsers
+          window.location.href = window.location.href;
+      }
+    }
+
+    // Call the clearCache function on page load
+    window.onload = function () {
+        clearCache();
+    };
+
     // Add event listener to the window's scroll event
     window.addEventListener('scroll', toggleScrollButton);
   </script>
