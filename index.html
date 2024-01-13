@@ -449,6 +449,10 @@
       font-weight: bold;
       color: #0074e4;
     }
+
+    #js-logic iframe {
+      width: calc(100% - 0.65rem);
+    }
   </style>
 </head>
 
@@ -523,23 +527,33 @@
           <li>
             <a href="#js-logic" onclick="closeMenu()">=== JS Logic ===</a>
             <ul>
-              <li><a href="#js1" class="scroll_and_open">deepEqual Function</a>
+              <li>
+                <a href="#js1" class="scroll_and_open">deepEqual Function</a>
               </li>
-              <li><a href="#js2" class="scroll_and_open">chunkArray Function</a>
+              <li>
+                <a href="#js2" class="scroll_and_open">chunkArray Function</a>
               </li>
-              <li><a href="#js3" class="scroll_and_open">bulkRun Function</a>
+              <li>
+                <a href="#js3" class="scroll_and_open">bulkRun Function</a>
               </li>
-              <li><a href="#js4" class="scroll_and_open">arrayToObject
-                  Function</a></li>
-              <li><a href="#js5" class="scroll_and_open">objectToArray
-                  Function</a></li>
-              <li><a href="#js6" class="scroll_and_open">reliableMultiply
-                  Function</a></li>
-              <li><a href="#js7" class="scroll_and_open">mapObject Function</a>
+              <li>
+                <a href="#js4" class="scroll_and_open">arrayToObject Function</a>
               </li>
-              <li><a href="#js8" class="scroll_and_open">combos Function</a>
+              <li>
+                <a href="#js5" class="scroll_and_open">objectToArray Function</a>
               </li>
-              <li><a href="#js9" class="scroll_and_open">add Function</a></li>
+              <li>
+                <a href="#js6" class="scroll_and_open">reliableMultiply Function</a>
+              </li>
+              <li>
+                <a href="#js7" class="scroll_and_open">mapObject Function</a>
+              </li>
+              <li>
+                <a href="#js8" class="scroll_and_open">combos Function</a>
+              </li>
+              <li>
+                <a href="#js9" class="scroll_and_open">add Function</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -574,21 +588,33 @@
         <li>
           <a href="#js-logic">=== JS Logic ===</a>
           <ul>
-            <li><a href="#js1" class="scroll_and_open">deepEqual Function</a>
+            <li>
+              <a href="#js1" class="scroll_and_open">deepEqual Function</a>
             </li>
-            <li><a href="#js2" class="scroll_and_open">chunkArray Function</a>
+            <li>
+              <a href="#js2" class="scroll_and_open">chunkArray Function</a>
             </li>
-            <li><a href="#js3" class="scroll_and_open">bulkRun Function</a></li>
-            <li><a href="#js4" class="scroll_and_open">arrayToObject
-                Function</a></li>
-            <li><a href="#js5" class="scroll_and_open">objectToArray
-                Function</a></li>
-            <li><a href="#js6" class="scroll_and_open">reliableMultiply
-                Function</a></li>
-            <li><a href="#js7" class="scroll_and_open">mapObject Function</a>
+            <li>
+              <a href="#js3" class="scroll_and_open">bulkRun Function</a>
             </li>
-            <li><a href="#js8" class="scroll_and_open">combos Function</a></li>
-            <li><a href="#js9" class="scroll_and_open">add Function</a></li>
+            <li>
+              <a href="#js4" class="scroll_and_open">arrayToObject Function</a>
+            </li>
+            <li>
+              <a href="#js5" class="scroll_and_open">objectToArray Function</a>
+            </li>
+            <li>
+              <a href="#js6" class="scroll_and_open">reliableMultiply Function</a>
+            </li>
+            <li>
+              <a href="#js7" class="scroll_and_open">mapObject Function</a>
+            </li>
+            <li>
+              <a href="#js8" class="scroll_and_open">combos Function</a>
+            </li>
+            <li>
+              <a href="#js9" class="scroll_and_open">add Function</a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -652,9 +678,11 @@
     <section id="layout">
       <h2>HTML/CSS Layout</h2>
 
-      <img class="layout_image"
+      <img
+        class="layout_image"
         src="https://cloud.devit.group/apps/files_sharing/publicpreview/PgiakbTLHFdBddo?file=/Sandbox%20-%204.%20HTML%20Layout.png&fileId=769835&x=1920&y=1080&a=true"
-        alt="flexbox and grid overview layout">
+        alt="flexbox and grid overview layout"
+      >
 
       <strong>
         Task
@@ -666,12 +694,17 @@
 
       <hr>
 
-      <div class="solution" id="layout1_flex"
-        onclick="toggleOpen(document.getElementById('flex'))">
+      <div
+        class="solution"
+        id="layout1_flex"
+        onclick="toggleOpen(document.getElementById('flex'))"
+      >
         <h3>solution - flexbox</h3>
 
-        <iframe id="flex" src="./layouts/flex.html"
-          onload="attachClickEvent(this)"></iframe>
+        <iframe
+          id="flex" src="./layouts/flex.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
       </div>
 
       <p>
@@ -680,12 +713,17 @@
 
       <hr>
 
-      <div class="solution" id="layout2_grid"
-        onclick="toggleOpen(document.getElementById('grid'))">
+      <div
+        class="solution"
+        id="layout2_grid"
+        onclick="toggleOpen(document.getElementById('grid'))"
+      >
         <h3>solution - grid</h3>
 
-        <iframe id="grid" src="./layouts/grid.html"
-          onload="attachClickEvent(this)"></iframe>
+        <iframe
+          id="grid" src="./layouts/grid.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
       </div>
 
       <p>
@@ -695,12 +733,17 @@
 
       <hr>
 
-      <div class="solution" id="layout3_animation"
-        onclick="toggleOpen(document.getElementById('animation'))">
+      <div
+        class="solution" id="layout3_animation"
+        onclick="toggleOpen(document.getElementById('animation'))"
+      >
         <h3>solution - animation</h3>
 
-        <iframe id="animation" src="./layouts/animation.html"
-          onload="attachClickEvent(this)"></iframe>
+        <iframe
+          id="animation"
+          src="./layouts/animation.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
       </div>
 
     </section>
@@ -736,14 +779,22 @@
 
       <hr>
 
-      <div class="solution" id="js1"
-        onclick="toggleOpen(document.getElementById('deepEqual'))">
+      <div
+        class="solution"
+        id="js1"
+        onclick="toggleOpen(document.getElementById('deepEqual'))"
+      >
         <h3>
           solution - deepEqual
         </h3>
 
-        <iframe id="deepEqual"
-          src="./js-logic/function1-deepEqual.html"></iframe>
+        <iframe
+          id="deepEqual"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-mvn6h5?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript deepEqual()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <p>
@@ -763,14 +814,22 @@
 
       <hr>
 
-      <div class="solution" id="js2"
-        onclick="toggleOpen(document.getElementById('chunkArray'))">
+      <div
+        class="solution"
+        id="js2"
+        onclick="toggleOpen(document.getElementById('chunkArray'))"
+      >
         <h3>
           solution - chunkArray
         </h3>
 
-        <iframe id="chunkArray"
-          src="./js-logic/function2-chunkArray.html"></iframe>
+        <iframe
+          id="chunkArray"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-fy2rrg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript chunkArray()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -801,13 +860,22 @@
 
       <hr>
 
-      <div class="solution" id="js3"
-        onclick="toggleOpen(document.getElementById('bulkRun'))">
+      <div
+        class="solution"
+        id="js3"
+        onclick="toggleOpen(document.getElementById('bulkRun'))"
+      >
         <h3>
           solution - bulkRun
         </h3>
 
-        <iframe id="bulkRun" src="./js-logic/function3-bulkRun.html"></iframe>
+        <iframe
+          id="bulkRun"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-8d4td2?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript bulkRun()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -835,14 +903,22 @@
 
       <hr>
 
-      <div class="solution" id="js4"
-        onclick="toggleOpen(document.getElementById('arrayToObject'))">
+      <div
+        class="solution"
+        id="js4"
+        onclick="toggleOpen(document.getElementById('arrayToObject'))"
+      >
         <h3>
           solution - arrayToObject
         </h3>
 
-        <iframe id="arrayToObject"
-          src="./js-logic/function4-arrayToObject.html"></iframe>
+        <iframe
+          id="arrayToObject"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-tx9ghg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript arrayToObject()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -870,14 +946,22 @@
 
       <hr>
 
-      <div class="solution" id="js5"
-        onclick="toggleOpen(document.getElementById('objectToArray'))">
+      <div
+        class="solution"
+        id="js5"
+        onclick="toggleOpen(document.getElementById('objectToArray'))"
+      >
         <h3>
           solution - objectToArray
         </h3>
 
-        <iframe id="objectToArray"
-          src="./js-logic/function5-objectToArray.html"></iframe>
+        <iframe
+          id="objectToArray"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-hjljjh?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript objectToArray()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -916,14 +1000,22 @@
 
       <hr>
 
-      <div class="solution" id="js6"
-        onclick="toggleOpen(document.getElementById('reliableMultiply'))">
+      <div
+        class="solution"
+        id="js6"
+        onclick="toggleOpen(document.getElementById('reliableMultiply'))"
+      >
         <h3>
           solution - reliableMultiply
         </h3>
 
-        <iframe id="reliableMultiply"
-          src="./js-logic/function6-reliableMultiply.html"></iframe>
+        <iframe
+          id="reliableMultiply"
+          src="https://codesandbox.io/embed/jvklh3?view=editor&module=%2Findex.ts"
+          title="TypeScript reliableMultiply()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -957,14 +1049,22 @@
 
       <hr>
 
-      <div class="solution" id="js7"
-        onclick="toggleOpen(document.getElementById('mapObject'))">
+      <div
+        class="solution"
+        id="js7"
+        onclick="toggleOpen(document.getElementById('mapObject'))"
+      >
         <h3>
           solution - mapObject
         </h3>
 
-        <iframe id="mapObject"
-          src="./js-logic/function7-mapObject.html"></iframe>
+        <iframe
+          id="mapObject"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-rhpftq?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript mapObject()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -1037,13 +1137,22 @@
 
       <hr>
 
-      <div class="solution" id="js8"
-        onclick="toggleOpen(document.getElementById('combos'))">
+      <div
+        class="solution"
+        id="js8"
+        onclick="toggleOpen(document.getElementById('combos'))"
+      >
         <h3>
           solution - combos
         </h3>
 
-        <iframe id="combos" src="./js-logic/function8-combos.html"></iframe>
+        <iframe
+          id="combos"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-n5tpsx?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript combos()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
 
       <hr>
@@ -1065,20 +1174,29 @@
 
       <hr>
 
-      <div class="solution" id="js9"
-        onclick="toggleOpen(document.getElementById('add'))">
+      <div
+        class="solution"
+        id="js9"
+        onclick="toggleOpen(document.getElementById('add'))"
+      >
         <h3>
           solution - add
         </h3>
 
-        <iframe id="add" src="./js-logic/function9-add.html"></iframe>
+        <iframe
+          id="add"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-kmgzzp?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript add()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
       </div>
     </section>
   </main>
 
   <footer>
     <p>Feel free to explore each task's details and implementations in their
-      respective solution blocks.<br>
+      respective solution blocks.<br />
       If you have any questions or need further
       clarification, don't hesitate to reach out.</p>
 
@@ -1109,12 +1227,12 @@
     <p class="footer-copyright">
       <a
         href="https://drive.google.com/file/d/1kKBqudjqLXKSCDFw2MJvFFdSTL3ikhLP/view?usp=drive_link">
-        &copy; 2023 Vadym Chervoniak * Full-stack developer (č) auto-biography
-        coder
+        &copy; 2023 Vadym Chervoniak * Full-stack developer (č) auto-biography coder
       </a>
       <br />
-      <span class="contacts">+380505444199 | @vadym4che |
-        vadym4che@gmail.com</span>
+      <span class="contacts">
+        +380505444199 | @vadym4che | vadym4che@gmail.com
+      </span>
     </p>
   </footer>
 
