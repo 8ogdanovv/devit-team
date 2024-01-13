@@ -451,7 +451,24 @@
     }
 
     #js-logic iframe {
-      width: calc(100% - 0.65rem);
+      width: calc(100% - 0.25rem);
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (orientation: portrait)
+    {
+      #js-logic iframe {
+        height: calc(100vmax - 0.65rem);
+      }
+    }
+
+    @media (orientation: landscape)
+    {
+      #js-logic iframe {
+        height: calc(100vmin - 0.65rem);
+      }
     }
   </style>
 </head>
