@@ -481,7 +481,7 @@
     </a>
 
 
-    <a href="https://github.com/vadym4che/devit-team">
+    <a href="https://github.com/8ogdanovv/devit-team">
       <h1>DevIT Team Test Tasks Repository</h1>
 
       <p>Welcome to the DevIT Team Test Tasks repository!</p>
@@ -1218,22 +1218,22 @@
       clarification, don't hesitate to reach out.</p>
 
     <address class="address">
-      <a href="https://vadym4che.github.io/cv/">
-        <img src="./assets/logo256x256_ch.png" alt="digital-CV">
+      <a href="https://8ogdanovv.github.io/">
+        <img src="./assets/logo_light.png" alt="digital-CV">
       </a>
-      <a href="https://github.com/vadym4che">
+      <a href="https://github.com/8ogdanovv">
         <img src="./assets/2gh.svg" alt="git-hub">
       </a>
-      <a href="https://www.linkedin.com/in/vadym4che/">
+      <a href="https://www.linkedin.com/in/bogdanovvad1m/">
         <img src="./assets/3li.svg" alt="linkedin">
       </a>
-      <a href="https://www.facebook.com/vadym4che/">
+      <a href="https://www.facebook.com/bogdanovvad1m/">
         <img src="./assets/4fb.svg" alt="facebook">
       </a>
-      <a href="mailto:vadym4che@gmail.com">
+      <a href="mailto:8ogdanow@gmail.com">
         <img src="./assets/5gm.svg" alt="mail">
       </a>
-      <a href="https://t.me/vadym4che">
+      <a href="https://t.me/bogdanovvad1m">
         <img src="./assets/6tg.svg" alt="telegram">
       </a>
       <a href="tel:+380505444199">
@@ -1243,12 +1243,12 @@
 
     <p class="footer-copyright">
       <a
-        href="https://drive.google.com/file/d/1kKBqudjqLXKSCDFw2MJvFFdSTL3ikhLP/view?usp=drive_link">
-        &copy; 2023 Vadym Chervoniak * Full-stack developer (č) auto-biography coder
+        href="https://bit.ly/2PDFcv">
+        &copy; <span id="current-year"></span> Bogdanov Vadym * Full-stack developer (č) auto-biography coder
       </a>
       <br />
       <span class="contacts">
-        +380505444199 | @vadym4che | vadym4che@gmail.com
+        +380505444199 | @bogdanovvad1m | 8ogdanow@gmail.com
       </span>
     </p>
   </footer>
@@ -1347,32 +1347,38 @@
       }
     }
 
-    // Function to clear cache if not yet cleaned
-    function clearCacheIfNotYetCleared() {
-      const clearCache = () => {
-        if (window.location.reload) {
-          // Perform a forced reload (ignoring cache) of the current page
-          window.location.reload(true);
-        } else {
-          // Fallback method for older browsers
-          window.location.href = window.location.href;
-        }
-      }
+    // // Function to clear cache if not yet cleaned
+    // function clearCacheIfNotYetCleared() {
+    //   const clearCache = () => {
+    //     if (window.location.reload) {
+    //       // Perform a forced reload (ignoring cache) of the current page
+    //       window.location.reload(true);
+    //     } else {
+    //       // Fallback method for older browsers
+    //       window.location.href = window.location.href;
+    //     }
+    //   }
 
-      // Check if the flag exists in local storage
-      const cleanUpdateFlag = localStorage.getItem('cleanUpdate');
+    //   // Check if the flag exists in local storage
+    //   const cleanUpdateFlag = localStorage.getItem('cleanUpdate');
 
-      if (!cleanUpdateFlag) {
-        // Flag doesn't exist, clear cache and set the flag
-        clearCache();
+    //   if (!cleanUpdateFlag) {
+    //     // Flag doesn't exist, clear cache and set the flag
+    //     clearCache();
 
-        // Set the flag in local storage to prevent future cache clearing
-        localStorage.setItem('cleanUpdate', 'true');
-      }
+    //     // Set the flag in local storage to prevent future cache clearing
+    //     localStorage.setItem('cleanUpdate', 'true');
+    //   }
+    // }
+
+    function setCurrentYear() {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
     }
-
     // Call the clearCacheIfNotYetCleared function on page load
-    window.onload = () => clearCacheIfNotYetCleared();
+    window.onload = () => {
+      // clearCacheIfNotYetCleared();
+      setCurrentYear();
+    }
 
     // Add event listener to the window's scroll event
     window.addEventListener('scroll', toggleScrollButton);
